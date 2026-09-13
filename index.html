@@ -3,30 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NotedBit</title>
+  <meta name="description" content="NotedBit — projects and notes by Loran Mustafa.">
+  <title>NotedBit — Projects and Notes</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="NotedBit home">NotedBit</a>
 
-  <header>
-    <h1>NotedBit</h1>
-    <p>Projects and notes.</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#notes">Notes</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Projects</h2>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">notedbit.com</p>
+      <h1>Projects and notes.</h1>
+      <p class="hero-text">
+        A small personal space for things I build, try and learn.
+      </p>
+    </section>
 
-      <h3>NotedBit Website</h3>
-      <p>
-        This website is my personal space for projects and notes.
-      </p>
-      <p>
-        I’m building it from scratch with HTML, CSS and JavaScript while
-        learning more about web development along the way.
-      </p>
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="section-number">01</p>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div>
+            <p class="project-status">In progress</p>
+            <h3>NotedBit Website</h3>
+            <p>
+              The website you are on right now. I’m building it from scratch
+              with HTML, CSS and JavaScript as a home for future projects and notes.
+            </p>
+          </div>
+
+          <div class="project-meta">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="section-heading">
+        <p class="section-number">02</p>
+        <h2>Notes</h2>
+      </div>
+
+      <div class="empty-state">
+        <p>Nothing here yet.</p>
+        <span>Short notes about projects, ideas and things I learn will live here.</span>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="section-number">03</p>
+        <h2>About</h2>
+      </div>
+
+      <div class="about-copy">
+        <p>
+          NotedBit is my personal space for digital projects, experiments and notes.
+        </p>
+        <p>
+          I’m Loran Mustafa, a Business Informatics student. I use this site to
+          document things I actually build and what I learn along the way.
+        </p>
+      </div>
     </section>
   </main>
 
+  <footer class="site-footer">
+    <div>
+      <p>NotedBit</p>
+      <span>© <span id="year">2026</span></span>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:loran@notedbit.com">loran@notedbit.com</a>
+      <a href="https://github.com/NotedBit" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
 </body>
 </html>
