@@ -1,16 +1,28 @@
-## Hi there 👋
+# NotedBit
 
-<!--
-**NotedBit/notedbit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Personal project and portfolio website for documenting projects, experiments and notes.
 
-Here are some ideas to get you started:
+## Stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## Structure
+
+```text
+.
+├── index.html
+├── style.css
+├── script.js
+└── assets
+    ├── favicon.svg
+    └── og-preview.svg
+```
+
+## Deployment
+
+The site is designed to work as a static GitHub Pages site with no build step or server dependency.
+
+Repository: https://github.com/NotedBit/notedbit

@@ -3,98 +3,313 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NotedBit — projects and notes by Loran Mustafa.">
-  <title>NotedBit — Projects and Notes</title>
 
+  <title>NotedBit — Projects & Experiments</title>
+  <meta name="description" content="NotedBit is a personal space by Loran Mustafa for documenting projects, experiments and things learned along the way.">
+  <meta name="theme-color" content="#0b0d10">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NotedBit — Projects & Experiments">
+  <meta property="og:description" content="Personal projects, experiments and notes by Loran Mustafa.">
+  <meta property="og:url" content="https://notedbit.com/">
+  <meta property="og:image" content="https://notedbit.com/assets/og-preview.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="NotedBit home">NotedBit</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#projects">Projects</a>
-      <a href="#notes">Notes</a>
-      <a href="#about">About</a>
-    </nav>
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="NotedBit home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NotedBit</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open navigation"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
+          GitHub
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
+          </svg>
+        </a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">notedbit.com</p>
-      <h1>Projects and notes.</h1>
-      <p class="hero-text">
-        A small personal space for things I build, try and learn.
-      </p>
-    </section>
+  <main id="main-content">
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          Personal project space
+        </div>
 
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <p class="section-number">01</p>
-        <h2>Projects</h2>
+        <h1>
+          Projects, experiments
+          <span class="hero-muted">and things I’m working on.</span>
+        </h1>
+
+        <p class="hero-intro">
+          I’m Loran Mustafa, a Business Informatics student. NotedBit is where I
+          document small digital projects, ideas and what I learn while building them.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            View projects
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 10h10M11 6l4 4-4 4" />
+            </svg>
+          </a>
+
+          <a class="button button-secondary" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="github-icon">
+              <path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.57.1.78-.25.78-.55v-2.14c-3.18.69-3.85-1.35-3.85-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.54-.29-5.21-1.27-5.21-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.36-5.23 5.64.41.35.78 1.05.78 2.12v3.15c0 .3.21.66.79.55A11.4 11.4 0 0 0 12 .8Z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="project-list">
-        <article class="project-card">
+      <div class="hero-visual reveal" aria-label="Abstract interface preview">
+        <div class="visual-grid" aria-hidden="true"></div>
+
+        <div class="terminal-card">
+          <div class="terminal-topbar">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span>notedbit / current</span>
+          </div>
+
+          <div class="terminal-content">
+            <p><span class="terminal-key">project</span><span>NotedBit Website</span></p>
+            <p><span class="terminal-key">status</span><span class="live-label">in progress</span></p>
+            <p><span class="terminal-key">stack</span><span>HTML · CSS · JavaScript</span></p>
+            <p><span class="terminal-key">deploy</span><span>GitHub Pages</span></p>
+          </div>
+
+          <div class="terminal-footer">
+            <span>01 public project</span>
+            <span class="terminal-pulse" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="floating-note floating-note-a" aria-hidden="true">
+          <span>01</span>
+          <p>Build something small.</p>
+        </div>
+
+        <div class="floating-note floating-note-b" aria-hidden="true">
+          <span>02</span>
+          <p>Document what changed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section section-shell" id="projects">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <p>
+          A growing collection of things I’ve built or am actively working on.
+          More will be added when there is something worth showing.
+        </p>
+      </div>
+
+      <article class="project-card reveal">
+        <div class="project-preview" aria-hidden="true">
+          <div class="preview-browser">
+            <div class="preview-toolbar">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="preview-url">notedbit.com</div>
+            </div>
+
+            <div class="preview-page">
+              <div class="preview-nav">
+                <span class="preview-logo"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="preview-hero">
+                <div class="preview-label"></div>
+                <div class="preview-title preview-title-long"></div>
+                <div class="preview-title preview-title-short"></div>
+                <div class="preview-copy"></div>
+                <div class="preview-copy preview-copy-short"></div>
+              </div>
+
+              <div class="preview-card-row">
+                <div class="preview-mini-card"></div>
+                <div class="preview-mini-card preview-mini-card-muted"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-topline">
+            <span class="project-index">01</span>
+            <span class="project-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              In progress
+            </span>
+          </div>
+
           <div>
-            <p class="project-status">In progress</p>
             <h3>NotedBit Website</h3>
-            <p>
-              The website you are on right now. I’m building it from scratch
-              with HTML, CSS and JavaScript as a home for future projects and notes.
+            <p class="project-description">
+              A personal website for documenting projects and experiments. Built
+              from scratch and kept intentionally lightweight.
             </p>
           </div>
 
-          <div class="project-meta">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+          <ul class="tag-list" aria-label="Technologies used">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub Pages</li>
+          </ul>
+
+          <div class="project-links">
+            <a class="text-link" href="https://notedbit.github.io/notedbit/" target="_blank" rel="noreferrer">
+              View project
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
+              </svg>
+            </a>
+
+            <a class="text-link muted-link" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
+              GitHub
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
+              </svg>
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
+    </section>
+
+    <section class="about-section section-shell" id="about">
+      <div class="about-grid">
+        <div class="section-heading compact reveal">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2>A place to keep track of what I build.</h2>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p>
+            I study Business Informatics and use NotedBit as a simple home for
+            personal projects, experiments and notes.
+          </p>
+          <p>
+            I’m especially interested in software, digital products, data and AI.
+            The goal here is not to make everything look finished — it’s to document
+            real work and make progress visible over time.
+          </p>
+        </div>
+      </div>
+
+      <div class="tools-panel reveal">
+        <div>
+          <p class="section-kicker">Current tools</p>
+          <p class="tools-note">
+            Technologies currently used for this site.
+          </p>
+        </div>
+
+        <ul class="tools-list">
+          <li>
+            <span class="tool-icon" aria-hidden="true">&lt;/&gt;</span>
+            <span>HTML</span>
+          </li>
+          <li>
+            <span class="tool-icon" aria-hidden="true">{ }</span>
+            <span>CSS</span>
+          </li>
+          <li>
+            <span class="tool-icon" aria-hidden="true">JS</span>
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <span class="tool-icon" aria-hidden="true">G</span>
+            <span>Git</span>
+          </li>
+          <li>
+            <span class="tool-icon" aria-hidden="true">GH</span>
+            <span>GitHub</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section" id="notes">
-      <div class="section-heading">
-        <p class="section-number">02</p>
-        <h2>Notes</h2>
-      </div>
+    <section class="contact-section section-shell" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Questions or project-related inquiries?</h2>
+          <p>You can reach me by email or take a look at the repository on GitHub.</p>
+        </div>
 
-      <div class="empty-state">
-        <p>Nothing here yet.</p>
-        <span>Short notes about projects, ideas and things I learn will live here.</span>
-      </div>
-    </section>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:loran@notedbit.com">
+            loran@notedbit.com
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 10h10M11 6l4 4-4 4" />
+            </svg>
+          </a>
 
-    <section class="section" id="about">
-      <div class="section-heading">
-        <p class="section-number">03</p>
-        <h2>About</h2>
-      </div>
-
-      <div class="about-copy">
-        <p>
-          NotedBit is my personal space for digital projects, experiments and notes.
-        </p>
-        <p>
-          I’m Loran Mustafa, a Business Informatics student. I use this site to
-          document things I actually build and what I learn along the way.
-        </p>
+          <a class="button button-secondary" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
+            Repository
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>
-      <p>NotedBit</p>
-      <span>© <span id="year">2026</span></span>
-    </div>
+    <div class="footer-shell">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>NotedBit</span>
+        </a>
+        <p>Projects and notes by Loran Mustafa.</p>
+      </div>
 
-    <div class="footer-links">
-      <a href="mailto:loran@notedbit.com">loran@notedbit.com</a>
-      <a href="https://github.com/NotedBit" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="footer-meta">
+        <a href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">GitHub</a>
+        <span>© <span data-year>2026</span> NotedBit</span>
+      </div>
     </div>
   </footer>
 </body>
