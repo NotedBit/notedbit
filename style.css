@@ -1794,3 +1794,43 @@ svg {
     padding: 24px 20px;
   }
 }
+
+
+/* ------------------------------
+   Revision: simplified hero
+------------------------------ */
+
+.hero {
+  display: block;
+  min-height: auto;
+  padding-top: 112px;
+  padding-bottom: 118px;
+}
+
+.hero-copy {
+  max-width: 980px;
+}
+
+.hero h1 {
+  max-width: 940px;
+  font-size: clamp(3.5rem, 6.4vw, 6.4rem);
+}
+
+.hero-intro {
+  max-width: 690px;
+}
+
+.project-topline {
+  justify-content: flex-start;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 76px;
+    padding-bottom: 84px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 13vw, 5.2rem);
+  }
+}
