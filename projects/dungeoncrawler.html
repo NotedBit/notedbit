@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DungeonCrawler — NotedBit</title>
+  <meta name="description" content="DungeonCrawler is a C++ university group project documented on NotedBit.">
+  <meta name="theme-color" content="#0b0d10">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DungeonCrawler — NotedBit">
+  <meta property="og:description" content="A C++ university group project with object-oriented game, combat and level systems.">
+  <meta property="og:url" content="https://notedbit.com/projects/dungeoncrawler.html">
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand wordmark" href="../index.html" aria-label="NotedBit home">
+        <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open navigation"
+        data-nav-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="nav-contact" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="project-detail-page">
+    <section class="detail-hero section-shell">
+      <a class="back-link" href="../index.html#projects">
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M15 10H5M9 6l-4 4 4 4" />
+        </svg>
+        Back to projects
+      </a>
+
+      <div class="detail-hero-grid">
+        <div class="reveal">
+          <p class="section-kicker">University group project · WS 2022/23</p>
+          <h1>DungeonCrawler</h1>
+          <p class="detail-lead">
+            A playable dungeon crawler developed in C++ as part of
+            “Introduction to Algorithms and Data Structures” at the University of Osnabrück.
+          </p>
+
+          <ul class="tag-list detail-tags" aria-label="DungeonCrawler technologies and topics">
+            <li>C++</li>
+            <li>Object-oriented programming</li>
+            <li>Game logic</li>
+            <li>AlgoViz / SVG</li>
+          </ul>
+        </div>
+
+        <div class="project-preview dungeon-preview detail-preview reveal" aria-label="Stylized DungeonCrawler preview">
+          <div class="dungeon-window" aria-hidden="true">
+            <div class="dungeon-bar">
+              <span>DungeonCrawler</span>
+              <span>team project</span>
+            </div>
+            <div class="dungeon-map">
+              <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
+              <span class="wall"></span><span class="floor player">@</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor chest">◆</span><span class="wall"></span>
+              <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor enemy">×</span><span class="wall"></span><span class="floor"></span><span class="wall"></span>
+              <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor"></span><span class="floor"></span><span class="floor"></span><span class="wall"></span>
+              <span class="wall"></span><span class="floor gold">$</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor exit">↗</span><span class="wall"></span>
+              <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section section-shell">
+      <div class="detail-grid">
+        <div class="detail-block reveal">
+          <p class="section-kicker">Project</p>
+          <h2>What it included</h2>
+          <p>
+            The shared codebase combined player and enemy characters, combat,
+            health, attacks, gold, chests and poison mechanics with level and
+            field logic. The project also included randomized level generation
+            and logic for checking whether relevant areas and the exit were reachable.
+          </p>
+        </div>
+
+        <div class="detail-block reveal">
+          <p class="section-kicker">Collaboration</p>
+          <h2>How it was built</h2>
+          <p>
+            This was a group project. All team members worked on the same codebase
+            and could modify different parts of the game, so individual mechanics
+            are intentionally not presented here as the work of one person.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section section-shell">
+      <div class="detail-availability reveal">
+        <div>
+          <p class="section-kicker">Availability</p>
+          <h2>Project documentation</h2>
+          <p>
+            There is currently no public browser build or public source-code link
+            attached to this project. This page therefore documents the project
+            itself rather than presenting a reconstructed demo.
+          </p>
+        </div>
+
+        <a class="button button-secondary" href="../index.html#projects">
+          Return to projects
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <div>
+        <a class="brand wordmark footer-brand" href="../index.html" aria-label="NotedBit home">
+          <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
+        </a>
+        <p>Projects and notes by Loran Mustafa.</p>
+      </div>
+
+      <div class="footer-meta">
+        <a href="mailto:loran@notedbit.com">Email</a>
+        <a href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">GitHub</a>
+        <span>© <span data-year>2026</span> NotedBit</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
