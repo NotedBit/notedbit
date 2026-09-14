@@ -72,23 +72,19 @@
             <li>Game logic</li>
             <li>AlgoViz / SVG</li>
           </ul>
+
+          <div class="hero-actions detail-actions">
+            <a class="button button-primary" href="../games/dungeoncrawler/">
+              Play browser adaptation
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M5 10h10M11 6l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="project-preview dungeon-preview detail-preview reveal" aria-label="Stylized DungeonCrawler preview">
-          <div class="dungeon-window" aria-hidden="true">
-            <div class="dungeon-bar">
-              <span>DungeonCrawler</span>
-              <span>team project</span>
-            </div>
-            <div class="dungeon-map">
-              <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
-              <span class="wall"></span><span class="floor player">@</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor chest">◆</span><span class="wall"></span>
-              <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor enemy">×</span><span class="wall"></span><span class="floor"></span><span class="wall"></span>
-              <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor"></span><span class="floor"></span><span class="floor"></span><span class="wall"></span>
-              <span class="wall"></span><span class="floor gold">$</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor exit">↗</span><span class="wall"></span>
-              <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
-            </div>
-          </div>
+        <div class="project-preview project-image-preview detail-preview reveal">
+          <img src="../assets/dungeoncrawler-preview.png" alt="DungeonCrawler preview using the original pixel-art game assets">
         </div>
       </div>
     </section>
@@ -124,15 +120,17 @@
           <p class="section-kicker">Availability</p>
           <h2>Project documentation</h2>
           <p>
-            There is currently no public browser build or public source-code link
-            attached to this project. This page therefore documents the project
-            itself rather than presenting a reconstructed demo.
+            The original project ran as C++ code with AlgoViz and was not built for
+            standalone web deployment. For NotedBit, its core mechanics and original
+            pixel assets have been adapted into a lightweight JavaScript version that
+            can be played directly in the browser.
           </p>
         </div>
 
-        <a class="button button-secondary" href="../index.html#projects">
-          Return to projects
-        </a>
+        <div class="contact-actions">
+          <a class="button button-primary" href="../games/dungeoncrawler/">Play game</a>
+          <a class="button button-secondary" href="../index.html#projects">Return to projects</a>
+        </div>
       </div>
     </section>
   </main>
