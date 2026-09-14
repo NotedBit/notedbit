@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>NotedBit — Projects & Experiments</title>
-  <meta name="description" content="NotedBit is a personal space by Loran Mustafa for documenting projects, experiments and things learned along the way.">
+  <meta name="description" content="NotedBit is Loran Mustafa's personal space for documenting software, digital projects and experiments.">
   <meta name="theme-color" content="#0b0d10">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="NotedBit — Projects & Experiments">
-  <meta property="og:description" content="Personal projects, experiments and notes by Loran Mustafa.">
+  <meta property="og:description" content="Personal projects and experiments by Loran Mustafa.">
   <meta property="og:url" content="https://notedbit.com/">
   <meta property="og:image" content="https://notedbit.com/assets/og-preview.svg">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-
   <script src="script.js" defer></script>
 </head>
 
@@ -25,9 +24,8 @@
 
   <header class="site-header" data-header>
     <div class="nav-shell">
-      <a class="brand" href="#top" aria-label="NotedBit home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span>NotedBit</span>
+      <a class="brand wordmark" href="#top" aria-label="NotedBit home">
+        <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
       </a>
 
       <button
@@ -71,7 +69,7 @@
 
         <p class="hero-intro">
           I’m Loran Mustafa, a Business Informatics student. NotedBit is where I
-          document small digital projects, ideas and what I learn while building them.
+          document software, digital projects and things I learn while building them.
         </p>
 
         <div class="hero-actions">
@@ -91,7 +89,7 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Abstract interface preview">
+      <div class="hero-visual reveal" aria-label="NotedBit project overview">
         <div class="visual-grid" aria-hidden="true"></div>
 
         <div class="terminal-card">
@@ -99,30 +97,30 @@
             <div class="window-dots" aria-hidden="true">
               <span></span><span></span><span></span>
             </div>
-            <span>notedbit / current</span>
+            <span>notedbit / projects</span>
           </div>
 
           <div class="terminal-content">
-            <p><span class="terminal-key">project</span><span>NotedBit Website</span></p>
-            <p><span class="terminal-key">status</span><span class="live-label">in progress</span></p>
-            <p><span class="terminal-key">stack</span><span>HTML · CSS · JavaScript</span></p>
-            <p><span class="terminal-key">deploy</span><span>GitHub Pages</span></p>
+            <p><span class="terminal-key">01</span><span>DungeonCrawler</span></p>
+            <p><span class="terminal-key">02</span><span>MemeSmoke</span></p>
+            <p><span class="terminal-key">03</span><span>NotedBit Website</span></p>
+            <p><span class="terminal-key">status</span><span class="live-label">documented</span></p>
           </div>
 
           <div class="terminal-footer">
-            <span>01 public project</span>
+            <span>03 projects</span>
             <span class="terminal-pulse" aria-hidden="true"></span>
           </div>
         </div>
 
         <div class="floating-note floating-note-a" aria-hidden="true">
-          <span>01</span>
-          <p>Build something small.</p>
+          <span>BUILD</span>
+          <p>Keep the implementation small.</p>
         </div>
 
         <div class="floating-note floating-note-b" aria-hidden="true">
-          <span>02</span>
-          <p>Document what changed.</p>
+          <span>NOTE</span>
+          <p>Document what is worth keeping.</p>
         </div>
       </div>
     </section>
@@ -135,86 +133,193 @@
         </div>
 
         <p>
-          A growing collection of things I’ve built or am actively working on.
-          More will be added when there is something worth showing.
+          A small collection of projects I’ve worked on — from a university game
+          project to social media and this website itself.
         </p>
       </div>
 
-      <article class="project-card reveal">
-        <div class="project-preview" aria-hidden="true">
-          <div class="preview-browser">
-            <div class="preview-toolbar">
-              <div class="window-dots">
+      <div class="project-stack">
+        <article class="project-card project-card--game reveal">
+          <div class="project-preview dungeon-preview" aria-hidden="true">
+            <div class="dungeon-window">
+              <div class="dungeon-bar">
+                <span>DungeonCrawler</span>
+                <span>C++ · WS 2022/23</span>
+              </div>
+              <div class="dungeon-map">
+                <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
+                <span class="wall"></span><span class="floor player">@</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor chest">◆</span><span class="wall"></span>
+                <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor enemy">×</span><span class="wall"></span><span class="floor"></span><span class="wall"></span>
+                <span class="wall"></span><span class="floor"></span><span class="wall"></span><span class="floor"></span><span class="floor"></span><span class="floor"></span><span class="wall"></span>
+                <span class="wall"></span><span class="floor gold">$</span><span class="floor"></span><span class="floor"></span><span class="wall"></span><span class="floor exit">↗</span><span class="wall"></span>
+                <span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span><span class="wall"></span>
+              </div>
+              <div class="dungeon-legend">
+                <span><b>@</b> player</span>
+                <span><b>×</b> enemy</span>
+                <span><b>◆</b> chest</span>
+                <span><b>↗</b> exit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-topline">
+              <span class="project-index">01</span>
+              <span class="project-status project-status--neutral">University group project · 2022/23</span>
+            </div>
+
+            <div>
+              <h3>DungeonCrawler</h3>
+              <p class="project-description">
+                A playable C++ dungeon crawler developed in a shared university
+                codebase, with object-oriented game mechanics, enemies, combat and
+                level systems.
+              </p>
+            </div>
+
+            <ul class="tag-list" aria-label="DungeonCrawler technologies and topics">
+              <li>C++</li>
+              <li>Object-oriented programming</li>
+              <li>Game logic</li>
+              <li>AlgoViz / SVG</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="text-link" href="projects/dungeoncrawler.html">
+                Project details
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M5 10h10M11 6l4 4-4 4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--social reveal">
+          <div class="project-preview social-preview" aria-hidden="true">
+            <div class="social-window">
+              <div class="social-head">
+                <div class="social-avatar">MS</div>
+                <div>
+                  <strong>MemeSmoke</strong>
+                  <span>Instagram project</span>
+                </div>
+              </div>
+              <div class="social-metrics">
+                <div><strong>10k+</strong><span>peak followers</span></div>
+                <div><strong>90+</strong><span>Reels published</span></div>
+                <div><strong>8.1M</strong><span>peak views</span></div>
+              </div>
+              <div class="social-feed">
+                <span></span><span></span><span></span>
                 <span></span><span></span><span></span>
               </div>
-              <div class="preview-url">notedbit.com</div>
-            </div>
-
-            <div class="preview-page">
-              <div class="preview-nav">
-                <span class="preview-logo"></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div class="preview-hero">
-                <div class="preview-label"></div>
-                <div class="preview-title preview-title-long"></div>
-                <div class="preview-title preview-title-short"></div>
-                <div class="preview-copy"></div>
-                <div class="preview-copy preview-copy-short"></div>
-              </div>
-
-              <div class="preview-card-row">
-                <div class="preview-mini-card"></div>
-                <div class="preview-mini-card preview-mini-card-muted"></div>
-              </div>
             </div>
           </div>
-        </div>
 
-        <div class="project-content">
-          <div class="project-topline">
-            <span class="project-index">01</span>
-            <span class="project-status">
-              <span class="status-dot" aria-hidden="true"></span>
-              In progress
-            </span>
+          <div class="project-content">
+            <div class="project-topline">
+              <span class="project-index">02</span>
+              <span class="project-status project-status--neutral">Social media project · 2020–2025</span>
+            </div>
+
+            <div>
+              <h3>MemeSmoke</h3>
+              <p class="project-description">
+                An independently managed Instagram project focused on short-form
+                meme content. I selected and prepared clips with captions and
+                branding, published content and evaluated performance with Instagram Insights.
+              </p>
+            </div>
+
+            <ul class="tag-list" aria-label="MemeSmoke project topics">
+              <li>Content publishing</li>
+              <li>Editing</li>
+              <li>Branding</li>
+              <li>Instagram Insights</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="text-link" href="https://www.instagram.com/memesmoke" target="_blank" rel="noreferrer">
+                View Instagram
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card--site reveal">
+          <div class="project-preview" aria-hidden="true">
+            <div class="preview-browser">
+              <div class="preview-toolbar">
+                <div class="window-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="preview-url">notedbit.com</div>
+              </div>
+
+              <div class="preview-page">
+                <div class="preview-nav">
+                  <span class="preview-logo"></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="preview-hero">
+                  <div class="preview-label"></div>
+                  <div class="preview-title preview-title-long"></div>
+                  <div class="preview-title preview-title-short"></div>
+                  <div class="preview-copy"></div>
+                  <div class="preview-copy preview-copy-short"></div>
+                </div>
+
+                <div class="preview-card-row">
+                  <div class="preview-mini-card"></div>
+                  <div class="preview-mini-card preview-mini-card-muted"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h3>NotedBit Website</h3>
-            <p class="project-description">
-              A personal website for documenting projects and experiments. Built
-              from scratch and kept intentionally lightweight.
-            </p>
+          <div class="project-content">
+            <div class="project-topline">
+              <span class="project-index">03</span>
+              <span class="project-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                Live
+              </span>
+            </div>
+
+            <div>
+              <h3>NotedBit Website</h3>
+              <p class="project-description">
+                This personal project hub, built from scratch as a static site and
+                deployed through GitHub Pages with a custom domain.
+              </p>
+            </div>
+
+            <ul class="tag-list" aria-label="NotedBit website technologies">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GitHub Pages</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="text-link" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
+                Repository
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
+                </svg>
+              </a>
+            </div>
           </div>
-
-          <ul class="tag-list" aria-label="Technologies used">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub Pages</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="text-link" href="https://notedbit.github.io/notedbit/" target="_blank" rel="noreferrer">
-              View project
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
-              </svg>
-            </a>
-
-            <a class="text-link muted-link" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
-              GitHub
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
 
     <section class="about-section section-shell" id="about">
@@ -228,22 +333,22 @@
 
         <div class="about-copy reveal">
           <p>
-            I study Business Informatics and use NotedBit as a simple home for
-            personal projects, experiments and notes.
+            I’m Loran Mustafa and study Business Informatics. I use NotedBit as a
+            home for technical and digital projects that are worth documenting.
           </p>
           <p>
-            I’m especially interested in software, digital products, data and AI.
-            The goal here is not to make everything look finished — it’s to document
-            real work and make progress visible over time.
+            My interests include software, digital products, data and AI. Projects
+            can be finished, experimental or still evolving — the point is to show
+            the work clearly rather than dress it up.
           </p>
         </div>
       </div>
 
       <div class="tools-panel reveal">
         <div>
-          <p class="section-kicker">Current tools</p>
+          <p class="section-kicker">Current site stack</p>
           <p class="tools-note">
-            Technologies currently used for this site.
+            The small set of tools currently used to build and publish NotedBit.
           </p>
         </div>
 
@@ -277,7 +382,7 @@
         <div>
           <p class="section-kicker">Contact</p>
           <h2>Questions or project-related inquiries?</h2>
-          <p>You can reach me by email or take a look at the repository on GitHub.</p>
+          <p>Email is the simplest way to reach me. The public source for this website is available on GitHub.</p>
         </div>
 
         <div class="contact-actions">
@@ -289,7 +394,7 @@
           </a>
 
           <a class="button button-secondary" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">
-            Repository
+            GitHub
           </a>
         </div>
       </div>
@@ -299,14 +404,14 @@
   <footer class="site-footer">
     <div class="footer-shell">
       <div>
-        <a class="brand footer-brand" href="#top">
-          <span class="brand-mark" aria-hidden="true">N</span>
-          <span>NotedBit</span>
+        <a class="brand wordmark footer-brand" href="#top" aria-label="NotedBit home">
+          <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
         </a>
         <p>Projects and notes by Loran Mustafa.</p>
       </div>
 
       <div class="footer-meta">
+        <a href="mailto:loran@notedbit.com">Email</a>
         <a href="https://github.com/NotedBit/notedbit" target="_blank" rel="noreferrer">GitHub</a>
         <span>© <span data-year>2026</span> NotedBit</span>
       </div>
