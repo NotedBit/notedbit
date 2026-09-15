@@ -21,6 +21,8 @@
   const endCopy = document.querySelector("[data-end-copy]");
   const startButton = document.querySelector("[data-start]");
   const resetButton = document.querySelector("[data-reset]");
+  const fullscreenButton = document.querySelector("[data-fullscreen]");
+  const gameFrame = document.querySelector(".game-frame");
   const playAgainButton = document.querySelector("[data-play-again]");
   const characterButtons = [...document.querySelectorAll("[data-character]")];
   const moveButtons = [...document.querySelectorAll("[data-move]")];
@@ -521,6 +523,41 @@
     drawIdleBackground();
   }
 
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = document.fullscreenElement === gameFrame;
+    fullscreenButton.textContent = active ? "Exit fullscreen" : "Fullscreen";
+    fullscreenButton.setAttribute(
+      "aria-label",
+      active ? "Exit fullscreen" : "Enter fullscreen"
+    );
+  }
+
+  async function toggleFullscreen() {
+    if (!gameFrame || !fullscreenButton) return;
+
+    try {
+      if (document.fullscreenElement === gameFrame) {
+        await document.exitFullscreen();
+      } else if (gameFrame.requestFullscreen) {
+        await gameFrame.requestFullscreen();
+      } else {
+        setMessage("Fullscreen is not supported by this browser.");
+      }
+    } catch {
+      setMessage("Fullscreen could not be opened.");
+    }
+  }
+
+  if (!document.fullscreenEnabled && fullscreenButton) {
+    fullscreenButton.disabled = true;
+    fullscreenButton.title = "Fullscreen is not supported by this browser.";
+  }
+
+  document.addEventListener("fullscreenchange", updateFullscreenButton);
+  fullscreenButton?.addEventListener("click", toggleFullscreen);
+
   characterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       selectedClass = button.dataset.character;
@@ -564,7 +601,42 @@
 
     if (!state && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
       selectedClass = selectedClass === "fighter" ? "mage" : "fighter";
-      characterButtons.forEach((button) => {
+    
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = document.fullscreenElement === gameFrame;
+    fullscreenButton.textContent = active ? "Exit fullscreen" : "Fullscreen";
+    fullscreenButton.setAttribute(
+      "aria-label",
+      active ? "Exit fullscreen" : "Enter fullscreen"
+    );
+  }
+
+  async function toggleFullscreen() {
+    if (!gameFrame || !fullscreenButton) return;
+
+    try {
+      if (document.fullscreenElement === gameFrame) {
+        await document.exitFullscreen();
+      } else if (gameFrame.requestFullscreen) {
+        await gameFrame.requestFullscreen();
+      } else {
+        setMessage("Fullscreen is not supported by this browser.");
+      }
+    } catch {
+      setMessage("Fullscreen could not be opened.");
+    }
+  }
+
+  if (!document.fullscreenEnabled && fullscreenButton) {
+    fullscreenButton.disabled = true;
+    fullscreenButton.title = "Fullscreen is not supported by this browser.";
+  }
+
+  document.addEventListener("fullscreenchange", updateFullscreenButton);
+  fullscreenButton?.addEventListener("click", toggleFullscreen);
+
+  characterButtons.forEach((button) => {
         button.classList.toggle("is-selected", button.dataset.character === selectedClass);
       });
     }
