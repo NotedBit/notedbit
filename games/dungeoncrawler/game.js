@@ -601,42 +601,7 @@
 
     if (!state && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
       selectedClass = selectedClass === "fighter" ? "mage" : "fighter";
-    
-  function updateFullscreenButton() {
-    if (!fullscreenButton) return;
-    const active = document.fullscreenElement === gameFrame;
-    fullscreenButton.textContent = active ? "Exit fullscreen" : "Fullscreen";
-    fullscreenButton.setAttribute(
-      "aria-label",
-      active ? "Exit fullscreen" : "Enter fullscreen"
-    );
-  }
-
-  async function toggleFullscreen() {
-    if (!gameFrame || !fullscreenButton) return;
-
-    try {
-      if (document.fullscreenElement === gameFrame) {
-        await document.exitFullscreen();
-      } else if (gameFrame.requestFullscreen) {
-        await gameFrame.requestFullscreen();
-      } else {
-        setMessage("Fullscreen is not supported by this browser.");
-      }
-    } catch {
-      setMessage("Fullscreen could not be opened.");
-    }
-  }
-
-  if (!document.fullscreenEnabled && fullscreenButton) {
-    fullscreenButton.disabled = true;
-    fullscreenButton.title = "Fullscreen is not supported by this browser.";
-  }
-
-  document.addEventListener("fullscreenchange", updateFullscreenButton);
-  fullscreenButton?.addEventListener("click", toggleFullscreen);
-
-  characterButtons.forEach((button) => {
+      characterButtons.forEach((button) => {
         button.classList.toggle("is-selected", button.dataset.character === selectedClass);
       });
     }
