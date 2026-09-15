@@ -524,9 +524,14 @@
   }
 
 
+  function isGameFullscreen() {
+    return document.fullscreenElement === document.documentElement ||
+      document.body.classList.contains("game-fullscreen-active");
+  }
+
   function updateFullscreenButton() {
     if (!fullscreenButton) return;
-    const active = document.fullscreenElement === gameFrame;
+    const active = isGameFullscreen();
     fullscreenButton.textContent = active ? "Exit fullscreen" : "Fullscreen";
     fullscreenButton.setAttribute(
       "aria-label",
@@ -534,28 +539,70 @@
     );
   }
 
-  async function toggleFullscreen() {
-    if (!gameFrame || !fullscreenButton) return;
+  function enableFallbackFullscreen() {
+    document.body.classList.add("game-fullscreen-active");
+    updateFullscreenButton();
+  }
+
+  function disableFallbackFullscreen() {
+    document.body.classList.remove("game-fullscreen-active");
+    updateFullscreenButton();
+  }
+
+  async function enterGameFullscreen() {
+    if (!fullscreenButton) return;
 
     try {
-      if (document.fullscreenElement === gameFrame) {
-        await document.exitFullscreen();
-      } else if (gameFrame.requestFullscreen) {
-        await gameFrame.requestFullscreen();
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen({ navigationUI: "hide" });
+        document.body.classList.add("game-fullscreen-active");
       } else {
-        setMessage("Fullscreen is not supported by this browser.");
+        enableFallbackFullscreen();
       }
     } catch {
-      setMessage("Fullscreen could not be opened.");
+      // If native fullscreen is blocked, still provide a viewport-filling game mode.
+      enableFallbackFullscreen();
+    }
+
+    updateFullscreenButton();
+  }
+
+  async function exitGameFullscreen() {
+    disableFallbackFullscreen();
+
+    if (document.fullscreenElement && document.exitFullscreen) {
+      try {
+        await document.exitFullscreen();
+      } catch {
+        // Fallback mode has already been removed, so nothing else is required.
+      }
+    }
+
+    updateFullscreenButton();
+  }
+
+  async function toggleFullscreen() {
+    if (isGameFullscreen()) {
+      await exitGameFullscreen();
+    } else {
+      await enterGameFullscreen();
     }
   }
 
-  if (!document.fullscreenEnabled && fullscreenButton) {
-    fullscreenButton.disabled = true;
-    fullscreenButton.title = "Fullscreen is not supported by this browser.";
-  }
+  document.addEventListener("fullscreenchange", () => {
+    // Leaving native fullscreen with Esc should also leave the game layout mode.
+    if (!document.fullscreenElement) {
+      document.body.classList.remove("game-fullscreen-active");
+    }
+    updateFullscreenButton();
+  });
 
-  document.addEventListener("fullscreenchange", updateFullscreenButton);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.body.classList.contains("game-fullscreen-active") && !document.fullscreenElement) {
+      disableFallbackFullscreen();
+    }
+  });
+
   fullscreenButton?.addEventListener("click", toggleFullscreen);
 
   characterButtons.forEach((button) => {
