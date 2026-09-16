@@ -1873,3 +1873,20 @@ svg {
     min-height: 320px;
   }
 }
+
+
+/* ------------------------------
+   MemeSmoke image grid
+------------------------------ */
+
+.social-feed span {
+  overflow: hidden;
+  background: #141a20;
+}
+
+.social-feed img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
