@@ -2011,3 +2011,33 @@ svg {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ------------------------------
+   Project detail hero overflow fix
+------------------------------ */
+
+.detail-hero-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: clamp(36px, 4vw, 60px);
+}
+
+.detail-hero-grid > * {
+  min-width: 0;
+}
+
+.detail-hero h1 {
+  max-width: 100%;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+}
+
+@media (max-width: 1180px) and (min-width: 981px) {
+  .detail-hero h1 {
+    font-size: clamp(3rem, 5.6vw, 4.3rem);
+  }
+
+  .detail-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    gap: 36px;
+  }
+}
