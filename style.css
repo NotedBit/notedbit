@@ -1890,3 +1890,33 @@ svg {
   display: block;
   object-fit: cover;
 }
+
+
+/* ------------------------------
+   MemeSmoke clean achievement grid
+------------------------------ */
+
+.social-feed--achievements {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.social-feed--achievements span {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #151b21;
+}
+
+.social-feed--achievements img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .social-feed--achievements {
+    grid-template-columns: 1fr;
+  }
+}
