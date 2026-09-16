@@ -1955,3 +1955,59 @@ svg {
   display: block;
   object-fit: cover;
 }
+
+
+/* ------------------------------
+   MemeSmoke final cleanup
+------------------------------ */
+
+.social-avatar--instagram {
+  padding: 2px;
+  border: 0;
+  background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 52%, #6228d7 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.social-avatar-inner {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #0f1318;
+  padding: 2px;
+}
+
+.social-avatar-inner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-feed--memesmoke {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.social-feed--memesmoke span {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.055);
+  background: #151b21;
+}
+
+.social-feed--memesmoke img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .social-feed--memesmoke {
+    grid-template-columns: 1fr;
+  }
+}
