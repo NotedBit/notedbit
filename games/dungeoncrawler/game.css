@@ -508,3 +508,11 @@ body.game-fullscreen-active .mobile-controls {
     padding-inline: 9px;
   }
 }
+
+/* Avoid horizontal scrolling from the long game title on small phones. */
+@media (max-width: 520px) {
+  .game-intro h1 {
+    font-size: clamp(2.3rem, 10vw, 3.1rem);
+    overflow-wrap: anywhere;
+  }
+}
