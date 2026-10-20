@@ -2162,3 +2162,24 @@ svg {
   .skills-groups { grid-template-columns: 1fr; }
   .pipeline-stage { font-size: .78rem; }
 }
+
+
+/* ------------------------------
+   Portfolio copy / verified-run presentation — October 2026
+------------------------------ */
+.detail-heading { max-width: 760px; margin-bottom: 30px; }
+.detail-heading h2 { margin: 0 0 14px; font-size: clamp(1.85rem, 3.2vw, 2.85rem); line-height: 1.08; letter-spacing: -.045em; }
+.detail-heading > p:last-child { margin: 0; color: var(--text-soft); }
+.validation-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.validation-metric { min-width: 0; padding: clamp(17px, 2vw, 25px); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.validation-metric strong { display: block; font-size: clamp(1.3rem, 2.2vw, 2rem); font-weight: 670; line-height: 1.15; letter-spacing: -.035em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.validation-metric span { display: block; margin-top: 11px; color: var(--text-soft); font-size: .83rem; }
+.validation-note { max-width: 780px; margin: 21px 0 0; color: var(--muted); font-size: .84rem; }
+@media (max-width: 980px) { .validation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .validation-grid { gap: 9px; } .validation-metric { padding: 15px; } .validation-metric strong { font-size: 1.22rem; } }
+
+/* Keep project-detail media within the viewport on tablets and phones.
+   The desktop grid rule above intentionally sets a 360px minimum. */
+@media (max-width: 980px) {
+  .detail-hero-grid { grid-template-columns: minmax(0, 1fr); }
+}
