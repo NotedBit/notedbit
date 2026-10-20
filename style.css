@@ -1,5 +1,5 @@
 /* ------------------------------
-   NotedBit — base
+   Notedbit — base
 ------------------------------ */
 
 :root {
@@ -1348,7 +1348,7 @@ svg {
   }
 }
 /* ------------------------------
-   NotedBit wordmark
+   Notedbit wordmark
 ------------------------------ */
 
 .wordmark {
@@ -2040,4 +2040,125 @@ svg {
     grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
     gap: 36px;
   }
+}
+
+
+/* ------------------------------
+   Portfolio extension — October 2026
+------------------------------ */
+
+#skills { scroll-margin-top: calc(var(--header-height) + 20px); }
+
+.skills-panel h3 {
+  margin: 0 0 15px;
+  font-size: clamp(1.25rem, 2.4vw, 1.85rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.skills-group {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.skills-group h4 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: .88rem;
+  font-weight: 650;
+}
+
+.skills-group p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .83rem;
+  line-height: 1.65;
+}
+
+.project-preview--pipeline {
+  padding: clamp(22px, 4vw, 48px);
+  background: radial-gradient(ellipse at 50% 15%, rgba(139,184,255,.11), transparent 65%), #0e1115;
+}
+
+.pipeline-art {
+  width: min(100%, 430px);
+  padding: 22px;
+  border: 1px solid var(--border-strong);
+  border-radius: 18px;
+  background: rgba(16,20,25,.96);
+  box-shadow: 0 18px 50px rgba(0,0,0,.22);
+}
+
+.pipeline-label, .pipeline-footnote {
+  margin: 0;
+  color: var(--muted);
+  font-size: .7rem;
+  letter-spacing: .015em;
+}
+
+.pipeline-label { margin-bottom: 18px; font-weight: 600; }
+.pipeline-footnote { margin-top: 15px; font-style: italic; }
+.pipeline-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: var(--text);
+  background: var(--surface-2);
+  font-size: .85rem;
+}
+.pipeline-stage small { margin-left: auto; color: var(--muted); font-size: .7rem; }
+.pipeline-num { color: var(--accent); font-family: monospace; font-size: .78rem; }
+.pipeline-connector {
+  width: 1px;
+  height: 15px;
+  margin: 0 0 0 26px;
+  background: var(--border-strong);
+}
+
+.detail-pipeline {
+  min-width: 0;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.detail-pipeline-steps {
+  margin: 16px 0 0;
+  padding-left: 22px;
+  color: var(--text-soft);
+}
+.detail-pipeline-steps li { padding: 9px 0; }
+.detail-pipeline-steps li::marker { color: var(--accent); font-weight: 700; }
+
+/* Avoid overly wide unbreakable project titles inside the two-column hero. */
+.detail-hero-grid > * { min-width: 0; }
+.detail-hero h1 {
+  max-width: 100%;
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .skills-panel { grid-template-columns: 1fr; gap: 25px; }
+  .skills-groups { grid-template-columns: 1fr 1fr; }
+  .pipeline-art { padding: 16px; }
+}
+
+@media (max-width: 480px) {
+  .skills-groups { grid-template-columns: 1fr; }
+  .pipeline-stage { font-size: .78rem; }
 }
