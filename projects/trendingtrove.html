@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrendingTrove — Notedbit</title>
-  <meta name="description" content="TrendingTrove: an in-development Python pipeline for generating product videos with a local language model, text-to-speech and FFmpeg.">
+  <meta name="description" content="TrendingTrove is a Python video-production pipeline using local Qwen, Kokoro TTS and FFmpeg. Development status and verified Linux output.">
   <meta name="theme-color" content="#0b0d10">
   <meta property="og:type" content="website">
   <meta property="og:title" content="TrendingTrove — Notedbit">
-  <meta property="og:description" content="An in-development local video generation pipeline using Python, Qwen, Kokoro TTS and FFmpeg.">
+  <meta property="og:description" content="A local-first Python pipeline combining scripts, voice generation, storyboards and video rendering. Linux end-to-end output verified.">
   <meta property="og:url" content="https://notedbit.com/projects/trendingtrove.html">
   <meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
   <link rel="canonical" href="https://notedbit.com/projects/trendingtrove.html">
@@ -38,45 +38,63 @@
       <a class="back-link" href="../index.html#projects"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 10H5M9 6l-4 4 4 4"/></svg>Back to projects</a>
       <div class="detail-hero-grid">
         <div class="reveal">
-          <p class="section-kicker">Software project · In development</p>
+          <p class="section-kicker">Python application · In development</p>
           <h1>TrendingTrove</h1>
-          <p class="detail-lead">TrendingTrove (ProductVideoGenerator) is a Python-based application for automating short product videos with local text generation, speech synthesis and video rendering.</p>
+          <p class="detail-lead">A local-first application for producing short product videos. Python coordinates product data, script generation, speech synthesis, scene composition and video encoding in a single workflow.</p>
           <ul class="tag-list detail-tags" aria-label="Technologies used"><li>Python</li><li>Qwen</li><li>Kokoro TTS</li><li>FFmpeg</li><li>Linux</li></ul>
         </div>
         <div class="detail-pipeline reveal">
-          <p class="section-kicker">Simplified workflow</p>
+          <p class="section-kicker">Processing pipeline</p>
           <ol class="detail-pipeline-steps">
-            <li>Product input and research</li>
-            <li>Script generation with a local language model</li>
-            <li>Narration using local TTS</li>
-            <li>Video composition and rendering with FFmpeg</li>
+            <li>Collect product information and images</li>
+            <li>Generate and check script text with local Qwen</li>
+            <li>Synthesize narration with Kokoro TTS</li>
+            <li>Assemble scenes, captions and timings</li>
+            <li>Render and validate an MP4 with FFmpeg</li>
           </ol>
-          <p class="pipeline-footnote">Process diagram, not an application screenshot</p>
+          <p class="pipeline-footnote">Simplified process diagram — not an application screenshot</p>
         </div>
       </div>
     </section>
+
+    <section class="detail-section section-shell">
+      <div class="detail-heading reveal">
+        <p class="section-kicker">Verified development run · Linux</p>
+        <h2>End-to-end video generation</h2>
+        <p>A documented local test produced a complete vertical MP4 with six products, generated narration, scene composition and captions. The technical validation passed for this run.</p>
+      </div>
+      <div class="validation-grid reveal" aria-label="Recorded output from a Linux development run">
+        <div class="validation-metric"><strong>65.43 s</strong><span>Video duration</span></div>
+        <div class="validation-metric"><strong>360 × 640</strong><span>Test resolution</span></div>
+        <div class="validation-metric"><strong>30 FPS</strong><span>Frame rate</span></div>
+        <div class="validation-metric"><strong>6 products</strong><span>11 rendered scenes</span></div>
+      </div>
+      <p class="validation-note reveal">Results from a single recorded development run on Linux; not performance benchmarks or evidence of a fully validated Windows release. The rendered video file is not publicly hosted on this page.</p>
+    </section>
+
     <section class="detail-section section-shell">
       <div class="detail-grid">
         <div class="detail-block reveal">
-          <p class="section-kicker">What has been tested</p>
-          <h2>Local end-to-end pipeline</h2>
-          <p>A complete run generating a short vertical video has succeeded on Linux. The pipeline combines local text generation, Kokoro narration and FFmpeg-based video output.</p>
+          <p class="section-kicker">Implementation</p>
+          <h2>Connecting the components</h2>
+          <p>Python orchestrates local language-model inference, narration, storyboard timing and FFmpeg rendering. The workflow also checks script claims and performs technical checks on the exported video.</p>
         </div>
         <div class="detail-block reveal">
-          <p class="section-kicker">Current status</p>
-          <h2>Still in development</h2>
-          <p>The Linux workflow has been tested, but the application and its Windows packaging are still being refined. There is no public release or repository linked from this page.</p>
+          <p class="section-kicker">Development status</p>
+          <h2>Working prototype, ongoing refinement</h2>
+          <p>Linux end-to-end generation has been demonstrated. Windows launch and generation still require final verification; subjective narration quality and publishing-platform acceptance are not claimed as validated.</p>
         </div>
       </div>
     </section>
+
     <section class="detail-section section-shell">
       <div class="detail-availability reveal">
         <div>
-          <p class="section-kicker">Context</p>
-          <h2>Why this project</h2>
-          <p>The main engineering focus is connecting text, speech and video processing into one repeatable local workflow, rather than demonstrating a standalone AI model.</p>
+          <p class="section-kicker">Project scope</p>
+          <h2>Local production workflow</h2>
+          <p>The objective is a repeatable pipeline that converts product information into a timed, narrated vertical video without requiring external language-model API keys. The application and its distribution packages remain under development.</p>
         </div>
-        <a class="button button-secondary" href="../index.html#projects">Back to projects</a>
+        <a class="button button-secondary" href="../index.html#projects">All projects</a>
       </div>
     </section>
   </main>
