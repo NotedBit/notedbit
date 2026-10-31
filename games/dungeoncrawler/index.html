@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play DungeonCrawler — Notedbit</title>
-  <meta name="description" content="A browser adaptation of the original C++ DungeonCrawler university group project.">
+  <title>Play Dungeon Crawler — Notedbit</title>
+  <meta name="description" content="A browser adaptation of the original C++ Dungeon Crawler university group project.">
   <meta name="theme-color" content="#0b0d10">
 
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="game.css">
+  <script src="../../language.js" defer></script>
   <script src="game.js" defer></script>
 </head>
 
@@ -26,6 +27,11 @@
         <a href="../../projects/dungeoncrawler.html">Project details</a>
         <a href="../../index.html#projects">All projects</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Sprache / Language" data-language-switch>
+        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="en" lang="en" aria-label="Choose English" aria-pressed="true">EN</button>
+      </div>
     </div>
   </header>
 
@@ -33,7 +39,7 @@
     <section class="game-intro">
       <div>
         <p class="section-kicker">Browser adaptation</p>
-        <h1>DungeonCrawler</h1>
+        <h1>Dungeon Crawler</h1>
         <p>
           A lightweight browser version based on the mechanics and original pixel
           assets of the C++ university group project.
@@ -67,7 +73,7 @@
             id="dungeon-canvas"
             width="600"
             height="600"
-            aria-label="DungeonCrawler game area"
+            aria-label="Dungeon Crawler game area"
           ></canvas>
 
           <div class="game-overlay is-visible" data-overlay>
