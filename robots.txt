@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://notedbit.com/sitemap.xml

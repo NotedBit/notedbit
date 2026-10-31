@@ -298,7 +298,10 @@
       state = { english: raw, output: raw };
       textState.set(node, state);
     }
-    const updated = translateContent(state.english, currentLanguage);
+    const directGerman = node.parentElement.getAttribute("data-de");
+    const updated = directGerman !== null
+      ? (currentLanguage === "de" ? state.english.replace(/\S(?:[\s\S]*\S)?/, directGerman) : state.english)
+      : translateContent(state.english, currentLanguage);
     state.output = updated;
     if (raw !== updated) node.nodeValue = updated;
   }
@@ -314,7 +317,9 @@
       const raw = element.getAttribute(attribute);
       const state = attrs[attribute];
       if (!state || state.output !== raw) attrs[attribute] = { english: raw, output: raw };
-      const output = translateContent(attrs[attribute].english, currentLanguage);
+      const directGerman = element.getAttribute("data-" + attribute + "-de");
+      const output = directGerman !== null && currentLanguage === "de"
+        ? directGerman : translateContent(attrs[attribute].english, currentLanguage);
       attrs[attribute].output = output;
       if (raw !== output) element.setAttribute(attribute, output);
     }
