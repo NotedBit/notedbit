@@ -2307,3 +2307,11 @@ svg {
   .game-header .game-nav a { padding: 7px 4px; font-size: .77rem; }
   .game-header .language-switch { margin-left: 0; }
 }
+
+/* V1.3.1 – portfolio attribution: name without a duplicate study-program label. */
+.hero .hero-author {
+  text-transform: none;
+  letter-spacing: .025em;
+  font-size: .92rem;
+  font-weight: 600;
+}
