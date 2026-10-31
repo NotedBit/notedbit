@@ -1,142 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trending Trove — Notedbit</title>
-  <meta name="description" content="Trending Trove is a Python video-production pipeline using local Qwen, Kokoro TTS and FFmpeg. Development status and verified Linux output.">
-  <meta name="theme-color" content="#0b0d10">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Trending Trove — Notedbit">
-  <meta property="og:description" content="A local-first Python pipeline combining scripts, voice generation, storyboards and video rendering. Linux end-to-end output verified.">
-  <meta property="og:url" content="https://notedbit.com/projects/trendingtrove.html">
-  <meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
-  <link rel="canonical" href="https://notedbit.com/projects/trendingtrove.html">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../style.css">
-  <script src="../language.js" defer></script>
-  <script src="../script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header" data-header>
-    <div class="nav-shell">
-      <a class="brand wordmark" href="../index.html" aria-label="Notedbit home">
-        <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
-      </a>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+      <title data-de="Automatisierte Produktvideogenerierung — Notedbit">Automated Product Video Generation — Notedbit</title>
+      <meta name="description" content="A local Python application that combines product information, script generation, speech synthesis, scene composition and video rendering." data-content-de="Eine lokale Python-Anwendung, die Produktinformationen, Skriptgenerierung, Sprachsynthese, Szenenaufbau und Videorendering verbindet.">
+      <meta name="theme-color" content="#0b0d10"><meta property="og:type" content="website">
+      <meta property="og:title" content="Automated Product Video Generation — Notedbit" data-content-de="Automatisierte Produktvideogenerierung — Notedbit">
+      <meta property="og:description" content="A local Python application that combines product information, script generation, speech synthesis, scene composition and video rendering." data-content-de="Eine lokale Python-Anwendung, die Produktinformationen, Skriptgenerierung, Sprachsynthese, Szenenaufbau und Videorendering verbindet.">
+      <meta property="og:url" content="https://notedbit.com/projects/trendingtrove.html"><meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
+      <link rel="canonical" href="https://notedbit.com/projects/trendingtrove.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+      <link rel="stylesheet" href="../style.css"><script src="../language.js" defer></script><script src="../script.js" defer></script>
+      </head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header" data-header><div class="nav-shell">
+      <a class="brand wordmark" href="../index.html" aria-label="Notedbit home">Note<span class="wordmark-db">db</span>it</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation" data-nav-toggle><span></span><span></span></button>
       <nav class="site-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-        <a href="./">Projects</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#skills">Skills</a>
-        <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="nav-contact" href="../index.html#contact">Contact</a>
+        <a href="../projects/"><span data-de="Projekte">Projects</span></a>
+        <a href="../index.html#about"><span data-de="Über mich">About</span></a>
+        <a href="../index.html#skills"><span data-de="Kenntnisse">Skills</span></a>
+        <a href="../index.html#contact"><span data-de="Kontakt">Contact</span></a>
       </nav>
       <div class="language-switch" role="group" aria-label="Sprache / Language" data-language-switch>
-        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button>
-        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button><span aria-hidden="true">/</span>
         <button type="button" data-lang="en" lang="en" aria-label="Choose English" aria-pressed="true">EN</button>
       </div>
-    </div>
-  </header>
-  <main id="main-content" class="project-detail-page">
-    <section class="detail-hero section-shell">
-      <a class="back-link" href="./"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 10H5M9 6l-4 4 4 4"/></svg>Back to projects</a>
-      <div class="detail-hero-grid">
-        <div class="reveal">
-          <p class="section-kicker">Python application · In development</p>
-          <h1>Trending Trove</h1>
-          <p class="detail-lead">A local-first application for producing short product videos. Python coordinates product data, script generation, speech synthesis, scene composition and video encoding in a single workflow.</p>
-          <ul class="tag-list detail-tags" aria-label="Technologies used"><li>Python</li><li>Qwen</li><li>Kokoro TTS</li><li>FFmpeg</li><li>Linux</li></ul>
-        </div>
-        <div class="detail-pipeline reveal">
-          <p class="section-kicker">Processing pipeline</p>
-          <ol class="detail-pipeline-steps">
-            <li>Collect product information and images</li>
-            <li>Generate and check script text with local Qwen</li>
-            <li>Synthesize narration with Kokoro TTS</li>
-            <li>Assemble scenes, captions and timings</li>
-            <li>Render and validate an MP4 with FFmpeg</li>
-          </ol>
-          <p class="pipeline-footnote">Simplified process diagram — not an application screenshot</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section section-shell prototype-section" id="prototype-video">
-      <div class="detail-heading reveal">
-        <p class="section-kicker">Prototype demonstration · September 2026</p>
-        <h2>Generated video sample</h2>
-        <p>A recorded 62.5-second vertical product video from an earlier development iteration. This sample demonstrates the layout system, product imagery, narration and generated captions; it is not a final release.</p>
-      </div>
-      <div class="prototype-showcase reveal">
-        <div class="prototype-player">
-          <video controls playsinline preload="metadata" poster="../assets/trending-trove-poster.jpg"
-                 width="540" height="960" aria-label="Trending Trove product video prototype">
-            <source src="../assets/trending-trove-prototype.mp4" type="video/mp4">
-            Your browser does not support embedded video.
-          </video>
-        </div>
-        <div class="prototype-description">
-          <p class="section-kicker">Prototype output</p>
-          <h3>62.5 seconds · 1080 × 1920 · 30 FPS</h3>
-          <p>This clip is an earlier visual prototype. It shows multiple product layouts, rendered captions and a closing call to action. Visual consistency, product-category selection and voice quality are still being refined.</p>
-          <p>The separate Linux validation run documented below produced a different video. Its technical test results must not be interpreted as validation of this sample.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section section-shell">
-      <div class="detail-heading reveal">
-        <p class="section-kicker">Verified development run · Linux</p>
-        <h2>End-to-end video generation</h2>
-        <p>A documented local test produced a complete vertical MP4 with six products, generated narration, scene composition and captions. The technical validation passed for this run.</p>
-      </div>
-      <div class="validation-grid reveal" aria-label="Recorded output from a Linux development run">
-        <div class="validation-metric"><strong>65.43 s</strong><span>Video duration</span></div>
-        <div class="validation-metric"><strong>360 × 640</strong><span>Test resolution</span></div>
-        <div class="validation-metric"><strong>30 FPS</strong><span>Frame rate</span></div>
-        <div class="validation-metric"><strong>6 products</strong><span>11 rendered scenes</span></div>
-      </div>
-      <p class="validation-note reveal">Results from a single recorded development run on Linux; not performance benchmarks or evidence of a fully validated Windows release. The MP4 from this particular run is not hosted on this page.</p>
-    </section>
-
-    <section class="detail-section section-shell">
-      <div class="detail-grid">
-        <div class="detail-block reveal">
-          <p class="section-kicker">Implementation</p>
-          <h2>Connecting the components</h2>
-          <p>Python orchestrates local language-model inference, narration, storyboard timing and FFmpeg rendering. The workflow also checks script claims and performs technical checks on the exported video.</p>
-        </div>
-        <div class="detail-block reveal">
-          <p class="section-kicker">Development status</p>
-          <h2>Working prototype, ongoing refinement</h2>
-          <p>Linux end-to-end generation has been demonstrated. Windows launch and generation still require final verification; subjective narration quality and publishing-platform acceptance are not claimed as validated.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section section-shell">
-      <div class="detail-availability reveal">
-        <div>
-          <p class="section-kicker">Project scope</p>
-          <h2>Local production workflow</h2>
-          <p>The objective is a repeatable pipeline that converts product information into a timed, narrated vertical video without requiring external language-model API keys. The application and its distribution packages remain under development.</p>
-        </div>
-        <a class="button button-secondary" href="./">All projects</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-shell">
-      <a class="brand wordmark footer-brand" href="../index.html" aria-label="Notedbit home"><span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span></a>
-      <p class="footer-university">Business Information Systems (B.Sc.) · Technische Universität Braunschweig</p>
-      <div class="footer-meta">
-        <a href="mailto:loran@notedbit.com">Email</a>
-        <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">GitHub</a>
-        <span>© <span data-year>2026</span> Notedbit</span>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </div></header>
+      <main id="main-content"><section class="case-hero section-shell"><a class="back-link" href="./">← Projects</a>
+      <p class='section-kicker' data-de="Eigenständiges Softwareprojekt · ProductVideoGenerator / Trending Trove" >Independent software project · ProductVideoGenerator / Trending Trove</p>
+      <h1 class='case-title' data-de="Automatisierte Produktvideogenerierung" >Automated Product Video Generation</h1>
+      <p class='case-lede' data-de="Eine lokale Python-Anwendung, die Produktinformationen, Skriptgenerierung, Sprachsynthese, Szenenaufbau und Videorendering verbindet." >A local Python application that combines product information, script generation, speech synthesis, scene composition and video rendering.</p>
+      <div class="case-tags"><span>Python</span><span>PySide6</span><span>Qwen</span><span>Kokoro TTS</span><span>FFmpeg</span><span>Linux</span></div>
+      <dl class="case-facts"><div><dt data-de="Art">Type</dt><dd data-de="Anwendung / Automatisierungspipeline">Application / automation pipeline</dd></div><div><dt data-de="Stand">Status</dt><dd data-de="Funktionsfähiger Linux-Prototyp · In Entwicklung">Working Linux prototype · In development</dd></div></dl>
+      </section><section class="case-media section-shell" id="sample"><div class="case-media-head"><p class='section-kicker' data-de="Demonstration · früherer Prototyp" >Demonstration · earlier prototype</p><h2 data-de="Generiertes Beispielvideo" >Generated video sample</h2><p data-de="Dies ist ein Ausgabebeispiel, keine Bildschirmaufnahme der Anwendung und kein fertiges Produkt." >This is an output sample, not a screen recording of the application or a finished product.</p></div><div class="case-video-layout"><video controls playsinline preload="metadata" poster="../assets/trending-trove-poster.jpg" width="360" height="640" aria-label="Product video prototype" data-aria-label-de="Produktvideo-Prototyp"><source src="../assets/trending-trove-prototype.mp4" type="video/mp4"></video><div class="case-media-note"><h3 data-de="Was die Demonstration zeigt" >What the sample shows</h3><p data-de="Generierte Produktszenen, verschiedene Layouts, Vertonung, Untertitel und einen Abschlussaufruf. Die Demonstration stammt aus einer älteren Entwicklungsphase und enthält noch Einschränkungen bei Gestaltung und Kategorienauswahl." >Generated product scenes, visual variations, narration, captions and an ending call to action. The sample is an earlier development iteration and contains visual and category-selection limitations.</p><p data-de="Der separat dokumentierte Linux-Test wurde mit einer anderen Ausgabedatei durchgeführt. Seine Prüfergebnisse gelten nicht automatisch für diese Demonstration." >The separately documented Linux test was performed on a different output file. Its validation results do not certify this sample.</p></div></div></section><section class="case-section section-shell"><div class="case-section-head">
+      <p class='section-kicker' data-de="Ziel" >Purpose</p><h2 data-de="Von Produktinformationen zur Videoausgabe" >From product information to video output</h2>
+      </div><div class="case-section-body"><p data-de="Die Anwendung soll aus ausgewählten Produktdaten vertonte Produktvideos im Hochformat erzeugen. Python verbindet Datenverarbeitung, lokale Textgenerierung, Audio und Rendering zu einem durchgängigen Ablauf." >The application is designed to generate narrated vertical product videos from selected product data. Python coordinates data processing, local text generation, audio and rendering in an end-to-end workflow.</p></div></section><section class="case-section section-shell"><div class="case-section-head">
+      <p class='section-kicker' data-de="Umsetzung" >Implementation</p><h2 data-de="Komponenten der Pipeline" >Pipeline components</h2>
+      </div><div class="case-section-body"><p data-de="Die Pipeline verwendet ein lokales Qwen-Modell für Skripte, Kokoro zur Sprachsynthese und FFmpeg für das Videorendering. Szenenzeiten, Untertitel, Komposition und technische Prüfungen werden innerhalb der Anwendung verarbeitet. Eine Desktop-Oberfläche auf Basis von PySide6 gehört zum Projekt." >The pipeline uses a local Qwen model for scripts, Kokoro for speech synthesis and FFmpeg for video rendering. Scene timing, captions, composition and technical checks are handled within the application. A PySide6-based desktop interface is part of the project.</p></div></section><section class="case-section section-shell"><div class="case-section-head">
+      <p class='section-kicker' data-de="Nachweis" >Evidence</p><h2 data-de="Was tatsächlich geprüft wurde" >What has been verified</h2>
+      </div><div class="case-section-body"><p data-de="Oben ist ein früheres vollständiges Prototyp-Video abrufbar. Ein separater dokumentierter Linux-End-to-End-Test erzeugte ein MP4 mit sechs Produkten, Vertonung und Untertiteln und bestand automatisierte technische Prüfungen. Beides sind Entwicklungsnachweise, keine fertige Veröffentlichung." >An earlier complete prototype video is available above. A separate documented Linux end-to-end test generated an MP4 with six products, narration and captions and passed automated technical validation. Both are development evidence, not a finished public release.</p></div></section><section class="case-section section-shell"><div class="case-section-head">
+      <p class='section-kicker' data-de="Einschränkungen" >Limitations</p><h2 data-de="Aktuelle Entwicklungsarbeiten" >Current development work</h2>
+      </div><div class="case-section-body"><p data-de="Windows-Start und Videogenerierung sind noch nicht abschließend abgenommen. Natürlichkeit der Stimme, konsistente Produktkategorien und die visuelle Qualität werden weiter verbessert. Ein öffentlicher Download oder Quellcode-Link wird derzeit nicht angeboten." >Windows startup and generation have not been finally accepted. Narration naturalness, product-category consistency and visual quality remain active refinement areas. This project does not currently offer a public download or source repository.</p></div></section><section class="case-end section-shell"><a class="button button-secondary" href="./"><span data-de="Alle Projekte">All projects</span><span aria-hidden="true"> ↗</span></a><a class="button button-secondary" href="../index.html#contact"><span data-de="Kontakt">Contact</span><span aria-hidden="true"> ↗</span></a></section></main><footer class="site-footer"><div class="footer-shell"><div>
+    <a class="brand wordmark footer-brand" href="../index.html" aria-label="Notedbit home">Note<span class="wordmark-db">db</span>it</a>
+    <p class='footer-university' data-de="Wirtschaftsinformatik (B.Sc.) · Technische Universität Braunschweig" >Business Information Systems (B.Sc.) · Technische Universität Braunschweig</p>
+    </div><div class="footer-meta"><a href="mailto:loran@notedbit.com"><span data-de="E-Mail">Email</span></a>
+    <a href="https://github.com/notedbit" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/loran-mustafa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>© <span data-year>2026</span> Notedbit</span></div></div></footer></body></html>

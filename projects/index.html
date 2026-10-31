@@ -1,195 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Notedbit</title>
-  <meta name="description" content="Project archive by Loran Mustafa: software, simulations, Linux system work, media projects and coursework. Includes project status and available demos.">
-  <meta name="theme-color" content="#0b0d10">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects — Notedbit">
-  <meta property="og:description" content="Software projects, practical Linux work and coursework by Loran Mustafa.">
-  <meta property="og:url" content="https://notedbit.com/projects/">
-  <meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
-  <link rel="canonical" href="https://notedbit.com/projects/">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../style.css">
-  <script src="../language.js" defer></script>
-  <script src="../script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header" data-header>
-    <div class="nav-shell">
-      <a class="brand wordmark" href="../index.html" aria-label="Notedbit home">
-        <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
-      </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-        aria-label="Open navigation"
-        data-nav-toggle
-      >
-        <span></span>
-        <span></span>
-      </button>
-
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+      <title data-de="Projekte — Notedbit">Projects — Notedbit</title>
+      <meta name="description" content="Project archive for Loran Mustafa: software, C++, Python, Linux, web development, media, university coursework and clearly identified concepts." data-content-de="Projektarchiv von Loran Mustafa: Software, C++, Python, Linux, Webentwicklung, Medien, Studienarbeiten und klar getrennte Konzepte.">
+      <meta name="theme-color" content="#0b0d10"><meta property="og:type" content="website">
+      <meta property="og:title" content="Projects — Notedbit" data-content-de="Projekte — Notedbit">
+      <meta property="og:description" content="Project archive for Loran Mustafa: software, C++, Python, Linux, web development, media, university coursework and clearly identified concepts." data-content-de="Projektarchiv von Loran Mustafa: Software, C++, Python, Linux, Webentwicklung, Medien, Studienarbeiten und klar getrennte Konzepte.">
+      <meta property="og:url" content="https://notedbit.com/projects/"><meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
+      <link rel="canonical" href="https://notedbit.com/projects/"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+      <link rel="stylesheet" href="../style.css"><script src="../language.js" defer></script><script src="../script.js" defer></script>
+      </head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header" data-header><div class="nav-shell">
+      <a class="brand wordmark" href="../index.html" aria-label="Notedbit home">Note<span class="wordmark-db">db</span>it</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation" data-nav-toggle><span></span><span></span></button>
       <nav class="site-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
-        <a href="#projects">Projects</a>
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#skills">Skills</a>
-        <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">
-          GitHub
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M6.25 13.75 13.75 6.25M8 6.25h5.75V12" />
-          </svg>
-        </a>
-        <a class="nav-contact" href="../index.html#contact">Contact</a>
+        <a href="../projects/"><span data-de="Projekte">Projects</span></a>
+        <a href="../index.html#about"><span data-de="Über mich">About</span></a>
+        <a href="../index.html#skills"><span data-de="Kenntnisse">Skills</span></a>
+        <a href="../index.html#contact"><span data-de="Kontakt">Contact</span></a>
       </nav>
       <div class="language-switch" role="group" aria-label="Sprache / Language" data-language-switch>
-        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button>
-        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button><span aria-hidden="true">/</span>
         <button type="button" data-lang="en" lang="en" aria-label="Choose English" aria-pressed="true">EN</button>
       </div>
-    </div>
-  </header>
-  <main id="main-content" class="archive-page">
-    <section class="archive-hero section-shell">
-      <a class="back-link" href="../index.html"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 10H5M9 6l-4 4 4 4" /></svg>Back to home</a>
-      <p class="section-kicker">Notedbit · Loran Mustafa</p>
-      <h1>Project archive.</h1>
-      <p class="archive-intro">A record of software, prototypes, system work and earlier exercises. Entries distinguish functioning applications from experiments and incomplete coursework. Not every project has a public repository or demo.</p>
-      <nav class="archive-category-nav" aria-label="Project categories">
-        <a href="#applications">Applications &amp; simulations</a>
-        <a href="#systems">Systems &amp; infrastructure</a>
-        <a href="#other">Other projects</a>
-        <a href="#coursework">Coursework &amp; smaller exercises</a>
-      </nav>
-    </section>
-    <section class="archive-section section-shell" id="applications">
-  <div class="archive-section-heading reveal"><div><p class="section-kicker">Software</p><h2>Applications &amp; simulations</h2></div><p>Software applications, game development and video-generation experiments.</p></div>
-  <div class="archive-grid"><article class="archive-card reveal">
-    <p class="archive-card-status">In development · Linux pipeline tested</p>
-    <h3>Trending Trove</h3>
-    <p class="archive-card-description">A Python application for automated product-video creation. A recorded prototype demonstrates the rendering workflow; Windows verification is still pending.</p>
-    <p class="archive-card-tags">Python · Local AI · Video generation</p>
-    <div class="archive-links"><a class="text-link" href="trendingtrove.html" >Project details<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a><a class="text-link" href="../assets/trending-trove-prototype.mp4" target="_blank" rel="noopener noreferrer">Watch demo<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a></div>
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">University group project · Archived</p>
-    <h3>Dungeon Crawler</h3>
-    <p class="archive-card-description">Developed in a university team in 2023. A separate JavaScript adaptation makes selected game mechanics playable in the browser.</p>
-    <p class="archive-card-tags">C++ · JavaScript · Game logic</p>
-    <div class="archive-links"><a class="text-link" href="dungeoncrawler.html" >Project details<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a><a class="text-link" href="../games/dungeoncrawler/" >Play<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a></div>
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Prototype · Further documentation pending</p>
-    <h3>Simulation Video Generator</h3>
-    <p class="archive-card-description">Python-based simulations using moving objects and collisions, with video output. A public demo and technical write-up have not yet been added.</p>
-    <p class="archive-card-tags">Python · pygame · Video rendering</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Earlier experiment · Documentation pending</p>
-    <h3>Horror Video Generator</h3>
-    <p class="archive-card-description">An experiment in automating short-form horror stories and related video production. The implementation and media still need to be reviewed before publication.</p>
-    <p class="archive-card-tags">Story generation · Video workflows</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Incomplete coursework</p>
-    <h3>Library Management System</h3>
-    <p class="archive-card-description">A multi-class C++ library-management project covering books, users, borrowing records and file-based storage. The command interface is not complete.</p>
-    <p class="archive-card-tags">C++ · Object-oriented programming</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Live</p>
-    <h3>Notedbit</h3>
-    <p class="archive-card-description">This bilingual portfolio and project archive, built as a static website without a framework or backend.</p>
-    <p class="archive-card-tags">HTML · CSS · JavaScript · GitHub Pages</p>
-    <div class="archive-links"><a class="text-link" href="https://github.com/NotedBit/notedbit" target="_blank" rel="noopener noreferrer">Repository<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a></div>
-  </article></div>
-</section><section class="archive-section section-shell" id="systems">
-  <div class="archive-section-heading reveal"><div><p class="section-kicker">Infrastructure</p><h2>Systems &amp; infrastructure</h2></div><p>Practical Linux work and earlier server operation.</p></div>
-  <div class="archive-grid"><article class="archive-card reveal">
-    <p class="archive-card-status">Ongoing technical work</p>
-    <h3>Linux System Automation</h3>
-    <p class="archive-card-description">System configuration, troubleshooting and automated maintenance on Linux, including shell-based administration and systemd timers. This is a collection of practical tasks, not a commercial product.</p>
-    <p class="archive-card-tags">Linux · Shell · systemd</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Archived</p>
-    <h3>Dauntless Private Server</h3>
-    <p class="archive-card-description">Setup and operation of a private game server, including configuration, maintenance and backups. The project is no longer active.</p>
-    <p class="archive-card-tags">Linux · Server operation · Backups</p>
-    
-  </article></div>
-</section><section class="archive-section section-shell" id="other">
-  <div class="archive-section-heading reveal"><div><p class="section-kicker">Media</p><h2>Other projects</h2></div><p>Independent digital and media work.</p></div>
-  <div class="archive-grid"><article class="archive-card reveal">
-    <p class="archive-card-status">On hold · 2020–2025</p>
-    <h3>MemeSmoke</h3>
-    <p class="archive-card-description">An independent Instagram project focused on editing, publishing and analysing short-form content. It is documented as media work rather than software development.</p>
-    <p class="archive-card-tags">Social media · Editing · Analytics</p>
-    <div class="archive-links"><a class="text-link" href="https://www.instagram.com/memesmoke" target="_blank" rel="noopener noreferrer">Instagram<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a></div>
-  </article></div>
-</section><section class="archive-section section-shell" id="coursework">
-  <div class="archive-section-heading reveal"><div><p class="section-kicker">Coursework</p><h2>Coursework &amp; smaller exercises</h2></div><p>Earlier programming and technical exercises, shown with their original scale.</p></div>
-  <div class="archive-grid"><article class="archive-card reveal">
-    <p class="archive-card-status">Coursework</p>
-    <h3>Text-Based Calculator</h3>
-    <p class="archive-card-description">A console calculator that interprets number words and written operators, validates input and displays results.</p>
-    <p class="archive-card-tags">C++ · Text parsing</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Coursework</p>
-    <h3>Sorting Exercises</h3>
-    <p class="archive-card-description">Small sorting exercises, including a Bubble Sort implementation for a limited set of input values.</p>
-    <p class="archive-card-tags">C++ · Algorithms</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Coursework</p>
-    <h3>Currency Converter</h3>
-    <p class="archive-card-description">A console-based currency conversion exercise with fixed exchange rates; not a current exchange-rate service.</p>
-    <p class="archive-card-tags">C++ · Input handling</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Coursework</p>
-    <h3>Letter Generator</h3>
-    <p class="archive-card-description">An early console exercise that generates simple text output from user-provided details.</p>
-    <p class="archive-card-tags">C++ · Conditionals</p>
-    
-  </article><article class="archive-card reveal">
-    <p class="archive-card-status">Coursework</p>
-    <h3>Introductory C++ Exercises</h3>
-    <p class="archive-card-description">Small introductory programs, including Hello World, input/output practice and unfinished exercise templates. These are listed as coursework, not independent software projects.</p>
-    <p class="archive-card-tags">C++ · Fundamentals</p>
-    
-  </article>
-  <article class="archive-card reveal">
-    <p class="archive-card-status">Coursework · Documentation pending</p>
-    <h3>Digital Logic &amp; RISC-V Exercises</h3>
-    <p class="archive-card-description">Earlier computer-architecture exercises. No code or technical documentation is published here yet.</p>
-    <p class="archive-card-tags">Digital logic · Assembly</p>
-    
-  </article></div>
-</section>
-    <section class="archive-end section-shell"><p>Individual project pages and technical documentation will be added as the corresponding materials are prepared.</p><a class="button button-secondary" href="../index.html#contact">Contact<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" /></svg></a></section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-shell">
-      <div>
-        <a class="brand wordmark footer-brand" href="../index.html" aria-label="Notedbit home">
-          <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
-        </a>
-        <p class="footer-university">Business Information Systems (B.Sc.) · Technische Universität Braunschweig</p>
-      </div>
-
-      <div class="footer-meta">
-        <a href="mailto:loran@notedbit.com">Email</a>
-        <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">GitHub</a>
-        <span>© <span data-year>2026</span> Notedbit</span>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </div></header>
+      <main id="main-content"><section class="archive-hero section-shell"><p class='section-kicker' data-de="Portfolioarchiv" >Portfolio archive</p><h1 data-de="Projektarchiv" >Project archive</h1><p class='archive-intro' data-de="Dokumentierte Anwendungen, Systemarbeiten und Studienübungen. Die Einordnung richtet sich nach der tatsächlichen Umsetzung und vorhandenen Nachweisen, nicht nach möglichst eindrucksvollen Titeln." >Documented applications, system work and coursework. Projects are grouped by what was built and what can be verified — not by how impressive a title sounds.</p><nav class="archive-category-nav" aria-label="Project categories"><a href="#applications"><span data-de="Software &amp; Automatisierung">Software &amp; automation</span></a><a href="#systems"><span data-de="Web, Linux &amp; Infrastruktur">Web, Linux &amp; infrastructure</span></a><a href="#other"><span data-de="Medienprojekt">Media project</span></a><a href="#coursework"><span data-de="Studienarbeiten">University coursework</span></a><a href="#concepts"><span data-de="Konzepte">Concepts</span></a></nav></section><section class="archive-section section-shell" id="applications"><div class="archive-section-heading"><div><h2 data-de="Software &amp; Automatisierung" >Software &amp; automation</h2></div><p data-de="Anwendungen und Pipeline-Experimente mit unterschiedlich gut belegtem Entwicklungsstand" >Applications and pipeline experiments with different levels of technical verification.</p></div><div class="archive-list"><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Funktionsfähiger Prototyp" >Working prototype</p><h3 data-de="Automatisierte Produktvideogenerierung" >Automated Product Video Generation</h3><p class='archive-entry-desc' data-de="Python-Pipeline mit Produktdaten, lokaler Textgenerierung, Vertonung und Rendering." >Python pipeline combining product data, local text generation, narration and rendering.</p><p class="archive-entry-tags">Python · Qwen · Kokoro · FFmpeg</p></div><div class="archive-entry-action"><a class="text-link" href="trendingtrove.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Entwicklung / Tests" >Development / testing</p><h3 data-de="Automatisierte Horrorstory- &amp; Videoproduktion" >Automated Horror Story &amp; Video Production</h3><p class='archive-entry-desc' data-de="Pipeline für fiktionale Horrorgeschichten mit Vertonung, Bildern, Untertiteln und Stapelverarbeitung." >Fictional horror-story pipeline with narration, images, captions and batch workflow.</p><p class="archive-entry-tags">Story workflow · Media automation</p></div><div class="archive-entry-action"><a class="text-link" href="horror-video-automation.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Simulationskern getestet" >Simulation core tested</p><h3 data-de="Python-Simulationen &amp; Videogenerierung" >Python Simulation &amp; Video Generation</h3><p class='archive-entry-desc' data-de="pygame-basierte Kollisionen, Events, reproduzierbare Seeds und geplanter Videoexport." >pygame-based collisions, events, repeatable seeds and planned video export.</p><p class="archive-entry-tags">Python · pygame</p></div><div class="archive-entry-action"><a class="text-link" href="python-simulations.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Gruppenprojekt / spielbarer Port" >Group project / playable port</p><h3 data-de="C++-Spieleentwicklung — Dungeon Crawler" >C++ Game Development — Dungeon Crawler</h3><p class='archive-entry-desc' data-de="Universitäres Gruppenspiel mit eigener spielbarer Browser-Adaption." >University group game with a separate playable browser adaptation.</p><p class="archive-entry-tags">C++ · JavaScript</p></div><div class="archive-entry-action"><a class="text-link" href="dungeoncrawler.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Unvollständige Studienarbeit" >Incomplete coursework</p><h3 data-de="C++-Bibliotheksverwaltung" >C++ Library Management Application</h3><p class='archive-entry-desc' data-de="Mehrklassiges Codearchiv; die Befehlsverarbeitung ist noch unvollständig." >Multi-class code archive; input-command handling remains incomplete.</p><p class="archive-entry-tags">C++ · OOP · File I/O</p></div><div class="archive-entry-action"><a class="text-link" href="library-management.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article></div></section><section class="archive-section section-shell" id="systems"><div class="archive-section-heading"><div><h2 data-de="Web, Linux &amp; Infrastruktur" >Web, Linux &amp; infrastructure</h2></div><p data-de="Veröffentlichte Websites, Systemkonfiguration und Serverbetrieb als unterschiedliche Arbeitsformen dokumentiert." >Working websites, system configuration and server operations, documented as distinct types of work.</p></div><div class="archive-list"><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Veröffentlichte Website" >Live website</p><h3 data-de="Webentwicklung &amp; Bereitstellung" >Web Development &amp; Deployment</h3><p class='archive-entry-desc' data-de="Notedbit: statische zweisprachige Website, GitHub Pages, Medien und Browserspiel." >Notedbit: static bilingual site, GitHub Pages, media and browser game.</p><p class="archive-entry-tags">HTML · CSS · JavaScript · Git</p></div><div class="archive-entry-action"><a class="text-link" href="web-development.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Praktische Arbeiten" >Practical work</p><h3 data-de="Linux-Konfiguration &amp; Systemautomatisierung" >Linux Configuration &amp; System Automation</h3><p class='archive-entry-desc' data-de="Lokale Wartungsskripte, systemd-Zeitsteuerung, Diagnose und Migrationen." >Local maintenance scripts, systemd scheduling, diagnostics and migrations.</p><p class="archive-entry-tags">Linux · Shell · systemd</p></div><div class="archive-entry-action"><a class="text-link" href="linux-automation.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Archiviert" >Archived</p><h3 data-de="Betrieb eines privaten Spielservers" >Private Game Server Operation</h3><p class='archive-entry-desc' data-de="Dauntless-Revived-Einrichtung und Wartung einschließlich Backups; nicht mehr aktiv." >Dauntless Revived setup and maintenance, including backups; no longer active.</p><p class="archive-entry-tags">Linux · Server operation</p></div><div class="archive-entry-action"><a class="text-link" href="linux-automation.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article></div></section><section class="archive-section section-shell" id="other"><div class="archive-section-heading"><div><h2 data-de="Medienprojekt" >Media project</h2></div><p data-de="Ein eigenständiges Medienprojekt, nicht als Softwareentwicklung eingeordnet." >An independent media project, not classified as software engineering.</p></div><div class="archive-list"><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Pausiert" >On hold</p><h3 data-de="Social-Media-Projekt — MemeSmoke" >Social Media Content Project — MemeSmoke</h3><p class='archive-entry-desc' data-de="Bearbeitung, Veröffentlichung und Reichweitenanalyse kurzer Inhalte." >Editing, publication and reach analysis of short-form content.</p><p class="archive-entry-tags">Content · Insights</p></div><div class="archive-entry-action"><a class="text-link" href="media-project.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article></div></section><section class="archive-section section-shell" id="coursework"><div class="archive-section-heading"><div><h2 data-de="Studienarbeiten" >University coursework</h2></div><p data-de="Frühere Programmier- und Rechnerarchitekturaufgaben werden thematisch gebündelt und nicht zu eigenständigen Softwareprodukten aufgebläht." >Earlier programming and computer-architecture work grouped by topic rather than inflated into individual software products.</p></div><div class="archive-list"><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Studienübungen" >Coursework</p><h3 data-de="C++-Programmierübungen" >C++ Programming Exercises</h3><p class='archive-entry-desc' data-de="Textrechner (Gruppe), Bubble Sort (Gruppe), einfache Währungs- und Briefprogramme sowie Grundlagenübungen." >Text-based calculator (group), Bubble Sort (group), basic currency and letter programs, introductory exercises.</p><p class="archive-entry-tags">C++ · Parsing · Algorithms</p></div><div class="archive-entry-action"><a class="text-link" href="coursework.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Dokumentation begrenzt" >Documentation limited</p><h3 data-de="Rechnerarchitektur &amp; Digitale Logik" >Computer Architecture &amp; Digital Logic</h3><p class='archive-entry-desc' data-de="RISC-V-/Assembly- und Digital-Schaltungsübungen; einzelne Abgaben müssen geprüft werden." >RISC-V/Assembly and Digital circuit coursework; individual submissions require review.</p><p class="archive-entry-tags">RISC-V · Digital</p></div><div class="archive-entry-action"><a class="text-link" href="coursework.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article><article class="archive-entry"><div class="archive-entry-body"><p class='archive-entry-status' data-de="Studienerfahrung" >Coursework</p><h3 data-de="Programmiergrundlagen" >Programming Foundations</h3><p class='archive-entry-desc' data-de="Java, R und SQL aus Studienveranstaltungen; keine eigenständige Portfolio-Anwendung behauptet." >Java, R and SQL learned through university courses; no standalone portfolio application claimed.</p><p class="archive-entry-tags">Java · R · SQL</p></div><div class="archive-entry-action"><a class="text-link" href="coursework.html"><span data-de="Fallstudie lesen">Read case study</span><span aria-hidden="true"> ↗</span></a></div></article></div></section><section class="archive-section section-shell" id="concepts"><div class="archive-section-heading"><div><h2 data-de="Konzepte &amp; Erkundungen" >Concepts &amp; exploration</h2></div><p data-de="Dies sind Ideen oder Untersuchungen, keine abgeschlossenen Portfolio-Projekte. Sie sind der Vollständigkeit halber aufgeführt, ohne eine Umsetzung vorzutäuschen." >These are ideas or investigations, not completed portfolio projects. They are recorded for completeness without implying an implementation.</p></div><div class="concept-list"><article class="concept-entry"><h3 data-de="Homelab &amp; lokale Automatisierung" >Home Lab &amp; Local Automation</h3><p data-de="Planung lokaler Docker-/Selfhosting-Dienste und logischer KI-Worker auf vorhandener Hardware." >Planning for local Docker/self-hosting services and logical AI workers on existing hardware.</p></article><article class="concept-entry"><h3 data-de="Netzwerkspeicher zu Hause" >Home Network Storage</h3><p data-de="Geplanter privater Dateispeicher an der FRITZ!Box; Einrichtung noch nicht nachgewiesen." >Proposed FRITZ!Box-based private file storage; deployment not yet verified.</p></article><article class="concept-entry"><h3 data-de="Datenschutz-Testgerät" >Privacy Test Device</h3><p data-de="Tails-/Tor-USB-Konzept für einen alten Laptop; nicht als fertige Sicherheitslösung dargestellt." >Tails/Tor USB concept for an old laptop; not represented as a completed security solution.</p></article><article class="concept-entry"><h3 data-de="Cyberdeck-Hardwarekonzept" >Cyberdeck Hardware Concept</h3><p data-de="Geplante Linux-Hardwarearbeit; kein bestätigter Zusammenbau." >Future Linux hardware-build idea; no confirmed assembly.</p></article><article class="concept-entry"><h3 data-de="Android-Datenschutz &amp; Betriebssysteme" >Android Privacy &amp; Operating Systems</h3><p data-de="Untersuchung von Alternativen, Gerätekompatibilität und datenschutzorientierter Einrichtung." >Investigation of alternatives, device compatibility and privacy-focused configuration.</p></article><article class="concept-entry"><h3 data-de="Connector für öffentliche Reddit-Daten" >Public Reddit Data Connector</h3><p data-de="Spezifikation zum Abrufen öffentlicher Subreddit-JSON-Daten ohne OAuth; ein getesteter Connector ist nicht bestätigt." >Specification for fetching public subreddit JSON without OAuth; a tested connector is not confirmed.</p></article><article class="concept-entry"><h3 data-de="KI-Plattform im Studienprojekt" >AI Platform Coursework</h3><p data-de="Erste Ideen für eine KI-gestützte Plattform im Impact-Learning-Kurs; Umsetzung nicht nachgewiesen." >Initial ideas for an AI-supported platform in an Impact Learning course; implementation not verified.</p></article><article class="concept-entry"><h3 data-de="Frühere Commerce- / Content-Ideen" >Early Commerce / Content Ideas</h3><p data-de="Frühere Affiliate-/Content-Ideen, darunter ein geplanter Produktkatalog unter finds.notedbit.com; eine Affiliate-Videoidee wurde als gemeinsames Projekt besprochen. Eine fertige Website oder Anwendung ist nicht nachgewiesen." >Earlier affiliate/content ideas, including a proposed product catalogue at finds.notedbit.com; an affiliate-video idea was discussed as a shared project. No finished site or application is verified.</p></article><article class="concept-entry"><h3 data-de="Weitere kleine Experimente" >Additional small experiments</h3><p data-de="Frühere Experimentnamen und Entwürfe wurden erwähnt; nur technisch konkret zuordenbare Arbeiten werden als Fallstudie gezeigt." >Earlier experiment names and drafts were mentioned; only technically identifiable work is promoted to a case study.</p></article></div></section><section class="case-end section-shell"><a class="button button-secondary" href="../index.html"><span data-de="Zurück zur Startseite">Back to homepage</span><span aria-hidden="true"> ↗</span></a></section></main><footer class="site-footer"><div class="footer-shell"><div>
+    <a class="brand wordmark footer-brand" href="../index.html" aria-label="Notedbit home">Note<span class="wordmark-db">db</span>it</a>
+    <p class='footer-university' data-de="Wirtschaftsinformatik (B.Sc.) · Technische Universität Braunschweig" >Business Information Systems (B.Sc.) · Technische Universität Braunschweig</p>
+    </div><div class="footer-meta"><a href="mailto:loran@notedbit.com"><span data-de="E-Mail">Email</span></a>
+    <a href="https://github.com/notedbit" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/loran-mustafa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>© <span data-year>2026</span> Notedbit</span></div></div></footer></body></html>
