@@ -2183,3 +2183,127 @@ svg {
 @media (max-width: 980px) {
   .detail-hero-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Notedbit V1.3 — bilingual navigation and recorded prototype */
+.nav-shell { gap: 12px; }
+.site-nav { margin-left: auto; }
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 2px;
+  margin-left: 7px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
+}
+.language-switch button {
+  min-width: 33px;
+  min-height: 30px;
+  padding: 4px 5px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.language-switch button[aria-pressed="true"] {
+  background: rgba(139,184,255,.15);
+  color: var(--text);
+}
+.language-switch button:hover { color: var(--text); }
+.language-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.footer-university { max-width: 390px; font-size: .79rem; color: var(--muted); }
+.footer-shell { align-items: center; }
+.footer-meta { flex-wrap: wrap; justify-content: flex-end; }
+.project-preview--video { padding: 18px; background: #10202a; }
+.project-video-still {
+  width: auto;
+  height: min(410px, 100%);
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.project-video-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 17px;
+  left: 17px;
+  right: 17px;
+  padding: 8px 11px;
+  border-radius: 8px;
+  background: rgba(5,10,13,.83);
+  color: #fff;
+  text-align: center;
+  font-size: .74rem;
+}
+.prototype-showcase {
+  display: grid;
+  grid-template-columns: minmax(220px, 330px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 70px);
+  max-width: 960px;
+}
+.prototype-player { max-width: 330px; }
+.prototype-player video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: #10181d;
+  box-shadow: 0 20px 55px rgba(0,0,0,.36);
+}
+.prototype-description h3 { margin: 0 0 18px; font-size: clamp(1.25rem, 2.25vw, 1.75rem); }
+.prototype-description p:not(.section-kicker) { color: var(--text-soft); }
+@media (max-width: 760px) {
+  .site-nav { margin-left: 0; }
+  .nav-toggle { margin-left: auto; }
+  .language-switch { margin-left: 0; }
+  .footer-shell { align-items: flex-start; }
+  .footer-meta { justify-content: flex-start; }
+  .prototype-showcase { grid-template-columns: 1fr; }
+  .prototype-player { width: min(100%, 330px); }
+}
+@media (max-width: 380px) {
+  .nav-shell { gap: 6px; }
+  .language-switch button { min-width: 30px; }
+}
+
+/* German headline needs a little more horizontal space on small screens. */
+@media (max-width: 760px) {
+  html[lang="de"] .hero h1 {
+    font-size: clamp(2.4rem, 10.3vw, 5.2rem);
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 520px) {
+  .detail-availability {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+  }
+  .detail-availability > div,
+  .detail-availability .contact-actions {
+    min-width: 0;
+  }
+  .detail-availability .button { white-space: normal; }
+}
+@media (max-width: 520px) {
+  .detail-availability h2 { overflow-wrap: anywhere; }
+}
+
+/* Game header inherits the same language control without changing game.css. */
+.game-header .game-nav { margin-left: auto; }
+@media (max-width: 760px) {
+  .game-header .nav-shell { gap: 6px; }
+  .game-header .game-nav a { padding: 7px 4px; font-size: .77rem; }
+  .game-header .language-switch { margin-left: 0; }
+}
