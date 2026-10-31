@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrendingTrove — Notedbit</title>
-  <meta name="description" content="TrendingTrove is a Python video-production pipeline using local Qwen, Kokoro TTS and FFmpeg. Development status and verified Linux output.">
+  <title>Trending Trove — Notedbit</title>
+  <meta name="description" content="Trending Trove is a Python video-production pipeline using local Qwen, Kokoro TTS and FFmpeg. Development status and verified Linux output.">
   <meta name="theme-color" content="#0b0d10">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="TrendingTrove — Notedbit">
+  <meta property="og:title" content="Trending Trove — Notedbit">
   <meta property="og:description" content="A local-first Python pipeline combining scripts, voice generation, storyboards and video rendering. Linux end-to-end output verified.">
   <meta property="og:url" content="https://notedbit.com/projects/trendingtrove.html">
   <meta property="og:image" content="https://notedbit.com/assets/og-preview.png">
   <link rel="canonical" href="https://notedbit.com/projects/trendingtrove.html">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
+  <script src="../language.js" defer></script>
   <script src="../script.js" defer></script>
 </head>
 <body>
@@ -31,6 +32,11 @@
         <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">GitHub</a>
         <a class="nav-contact" href="../index.html#contact">Contact</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Sprache / Language" data-language-switch>
+        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="en" lang="en" aria-label="Choose English" aria-pressed="true">EN</button>
+      </div>
     </div>
   </header>
   <main id="main-content" class="project-detail-page">
@@ -39,7 +45,7 @@
       <div class="detail-hero-grid">
         <div class="reveal">
           <p class="section-kicker">Python application · In development</p>
-          <h1>TrendingTrove</h1>
+          <h1>Trending Trove</h1>
           <p class="detail-lead">A local-first application for producing short product videos. Python coordinates product data, script generation, speech synthesis, scene composition and video encoding in a single workflow.</p>
           <ul class="tag-list detail-tags" aria-label="Technologies used"><li>Python</li><li>Qwen</li><li>Kokoro TTS</li><li>FFmpeg</li><li>Linux</li></ul>
         </div>
@@ -57,6 +63,29 @@
       </div>
     </section>
 
+    <section class="detail-section section-shell prototype-section" id="prototype-video">
+      <div class="detail-heading reveal">
+        <p class="section-kicker">Prototype demonstration · September 2026</p>
+        <h2>Generated video sample</h2>
+        <p>A recorded 62.5-second vertical product video from an earlier development iteration. This sample demonstrates the layout system, product imagery, narration and generated captions; it is not a final release.</p>
+      </div>
+      <div class="prototype-showcase reveal">
+        <div class="prototype-player">
+          <video controls playsinline preload="metadata" poster="../assets/trending-trove-poster.jpg"
+                 width="540" height="960" aria-label="Trending Trove product video prototype">
+            <source src="../assets/trending-trove-prototype.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+        </div>
+        <div class="prototype-description">
+          <p class="section-kicker">Prototype output</p>
+          <h3>62.5 seconds · 1080 × 1920 · 30 FPS</h3>
+          <p>This clip is an earlier visual prototype. It shows multiple product layouts, rendered captions and a closing call to action. Visual consistency, product-category selection and voice quality are still being refined.</p>
+          <p>The separate Linux validation run documented below produced a different video. Its technical test results must not be interpreted as validation of this sample.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-section section-shell">
       <div class="detail-heading reveal">
         <p class="section-kicker">Verified development run · Linux</p>
@@ -69,7 +98,7 @@
         <div class="validation-metric"><strong>30 FPS</strong><span>Frame rate</span></div>
         <div class="validation-metric"><strong>6 products</strong><span>11 rendered scenes</span></div>
       </div>
-      <p class="validation-note reveal">Results from a single recorded development run on Linux; not performance benchmarks or evidence of a fully validated Windows release. The rendered video file is not publicly hosted on this page.</p>
+      <p class="validation-note reveal">Results from a single recorded development run on Linux; not performance benchmarks or evidence of a fully validated Windows release. The MP4 from this particular run is not hosted on this page.</p>
     </section>
 
     <section class="detail-section section-shell">
@@ -101,6 +130,7 @@
   <footer class="site-footer">
     <div class="footer-shell">
       <a class="brand wordmark footer-brand" href="../index.html" aria-label="Notedbit home"><span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span></a>
+      <p class="footer-university">Business Information Systems (B.Sc.) · Technische Universität Braunschweig</p>
       <div class="footer-meta">
         <a href="mailto:loran@notedbit.com">Email</a>
         <a href="https://github.com/notedbit" target="_blank" rel="noreferrer">GitHub</a>
