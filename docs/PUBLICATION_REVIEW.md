@@ -22,3 +22,10 @@
 - Latest source/build for the horror generator, simulator, library-management app and Windows product-video release.
 - Rights to every external media element in the generated product clip.
 - Official legal obligations and exact privacy statement for the user's jurisdiction.
+
+## This revision (2026-11-01)
+
+- New editorial layout with a compact, searchable archive and a coherent wordmark (no letter gaps).
+- Personal university information appears in About, **not** under the footer logo.
+- The original 2024 C++ library coursework is still described as **unfinished**. The separately generated and tested 2026 reconstruction is only in the review-only delivery folder.
+- The ZIP installation helper must not delete existing repository files or replace the existing CNAME. Review each pending Git change before pushing.

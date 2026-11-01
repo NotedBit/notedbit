@@ -1,58 +1,40 @@
-# Project inventory and publication status
+# Notedbit — comprehensive project inventory
 
-Notedbit project catalogue. This document separates **built work**, **coursework**, and **concepts**.
-It records only claims supported by archived files, test notes or the author's project descriptions. A listed skill does not automatically imply production proficiency.
+The public portfolio groups implementations into nine main areas. Historic exercises are grouped; concept-only projects are inventoried below without being presented as finished work.
 
-## Main software projects
+## Documented software & systems
 
-| Work | Status | Evidence on website | Notes |
-|---|---|---|---|
-| Automated Product Video Generation (ProductVideoGenerator / Trending Trove) | Working Linux prototype; development ongoing | Earlier generated MP4; separate documented Linux test | Different output files; Windows release not fully validated |
-| C++ Game Development — Dungeon Crawler | Archived group project | Playable JavaScript adaptation; game assets | C++ original and JavaScript adaptation must not be conflated |
-| Python Simulation & Video Generation | Working simulation core; full workflow under development | Technical description; no verified hosted demo | pygame, events, collisions and deterministic seeds |
-| Automated Horror Story & Video Production (Deadbolt Stories) | Development and tests documented | Technical description; no verified hosted demo | Separate from product-video workflow |
-| C++ Library Management Application (`Projekt5`) | Source compiles; command interface incomplete | Archived code assessment | Do not claim a working application; publication/attribution needs review |
-| Web Development & Deployment (Notedbit) | Live / iteratively developed | Live website; public source | Static HTML/CSS/JS; no backend claimed |
-| Linux Configuration & System Automation | Completed individual operations + ongoing maintenance | Technical case study | Shell/systemd updates, troubleshooting, system migration |
-| Private Game Server Operation (Dauntless Revived) | Previously operated, now archived | Linux case study | Server operation, not game development |
-| Social Media Content Project (MemeSmoke) | On hold | Original achievement screenshots and Instagram profile | Media, not software; historical reach |
+1. **Automated Product Video Generation** (ProductVideoGenerator / Trending Trove, 2026) — Python, local Qwen, Kokoro TTS, FFmpeg, verified *earlier* video output and distinct Linux test logs. Linux prototype; Windows validation open.
+2. **Automated Horror Story & Video Production** (Deadbolt Stories, 2026) — Python story and short-video workflow. Earlier reports and archived packages; current source/export not directly revalidated here.
+3. **Python Simulation & Video Generation** (Satisfying Simulation Generator, 2026) — pygame-ce, ball/wall collisions, deterministic seeds, event system and run evaluation; end-to-end video workflow status needs reinspection.
+4. **C++ Game Development — Dungeon Crawler** (original WS 2022/23, group coursework) and later JavaScript browser adaptation — sprites and playable adaptation available; not a sole-author C++ claim.
+5. **C++ Library Management** (2024 source archive) — multiple C++ classes, vector/STL and persistence draft; original command handler was empty. Newly written 2026 reconstruction is supplied separately, *not* retroactively credited.
+6. **Web Development & Deployment** (Notedbit, 2026) — HTML/CSS/JavaScript, responsive bilingual portfolio and GitHub Pages.
+7. **Linux Configuration & System Automation** (2026) — Kubuntu migration/maintenance, Shell and systemd automation, diagnostics and environment configuration.
+8. **Private Game Server Operation** (Dauntless Revived, date pending verification) — private server operations under Linux, backup/operations; not development of the original game.
+9. **Social Media Content Project** (MemeSmoke, 2020–2025, on hold) — editing, publishing, Instagram Insights, documented historical metrics.
 
-## Coursework / earlier exercises
+## Small studies and experiments
 
-- C++ **text-based calculator** — group work (student names in source). Parser, validation, arithmetic and exception handling.
-- **Bubble Sort for three values** — group coursework; do not inflate into a full algorithms project.
-- **Currency conversion** — C++ introductory exercise; fixed exchange rates.
-- **Letter generation** — basic C++ console conditional exercise.
-- **Hello World / introductory programs / unfinished Project 3** — grouped as foundations, not portfolio apps.
-- **C++ library-management code** — a more substantial but unfinished project; origin of individual code should be checked before publishing source.
-- **RISC-V / Digital circuit exercises** — earlier technical-informatics coursework; specific individual deliverables must be reviewed before publishing.
-- **Java, SQL, R** — university course experience; not falsely assigned independent applications.
-- **`sortierer Mimi`** from the uploaded archive — not attributed to the author without proof of authorship.
+- Text-based C++ calculator — number-word parser, arithmetic, exception handling; **group coursework**.
+- Bubble Sort (three numbers) — **group coursework**; original final submission credited several students.
+- Currency converter — introductory C++ console exercise (fixed rates, not a current FX tool).
+- Letter-form generator — beginner C++ input/branching exercise.
+- Hello World/intro exercises, unfinished Project 3 — no standalone project page.
+- C++ `sortierer Mimi` — authorship unverified; do **not** attribute to Loran.
+- RISC-V assembly and digital-circuit exercises — earlier Technical Informatics coursework; rights/individual contribution need review.
+- Java, R, SQL work from study modules — skills/coursework, not asserted as independent standalone apps.
 
-## Concepts and exploratory work (NOT complete applications)
+## Earlier concepts; not public software claims
 
-- Home Lab / logical local AI Worker setup; single home host planned.
-- FRITZ!Box home NAS / private family cloud concept.
-- Tails/Tor privacy test laptop concept.
-- Cyberdeck hardware concept.
-- Android privacy, alternative operating systems and older-device experiments (compatibility first).
-- Public Reddit JSON connector specification without OAuth; no verified production connector.
-- AI platform concept from Impact Learning coursework.
-- Early Amazon/affiliate/content and miscellaneous story/game ideas without individually established implementation.
+- Local home lab / multiple logical AI workers / Docker/selfhosting concept.
+- FRITZ!Box NAS/private family cloud.
+- Privacy test laptop (Tails/Tor), Cyberdeck, Android privacy/custom-ROM research.
+- Public Reddit JSON connector without OAuth — specification; implementation not verified.
+- AI-assisted platform in an Impact Learning course — ideation stage.
+- Amazon/affiliate product catalogue/content ideas and other brainstorming work — do not duplicate Product Video Generation under different names without source distinction.
+- Previously mentioned games/story concepts without corresponding tested implementation.
 
-## Editorial rules
+## Publication protocol
 
-1. Use neutral portfolio headings that match the CV. Preserve actual project names only as secondary identifiers.
-2. Distinguish a prototype output from an application recording, and distinguish every test run from unrelated demos.
-3. Use a demo link only when an actual file or executable exists at that link.
-4. Do not imply ownership of all code in a group submission or university materials.
-5. Never claim Windows release readiness, production operations, full feature completion or public source that has not been verified.
-6. Do not add personal telephone/address/ID information from the CV to public pages.
-7. Keep the `CNAME` file and GitHub Pages configuration unchanged.
-
-## Before adding media/source for unpublished work
-
-- Inspect the exact file, actual function, copyright/privacy, and authorship.
-- Capture a real screenshot or export. Do not use a stock image as purported app output.
-- Document steps to reproduce, platform/dependencies and what has or has not been tested.
-- Update English and German text together.
+Each detailed public case has to distinguish: **what was built**, **who contributed**, **original year**, **actual evidence**, **current stage**, **remaining work**, and **rights**. Do not move pure ideas to the public archive or claim code belongs to the user without review. See `PROJECT_SOURCE_AUDIT.md` and `PUBLICATION_REVIEW.md`.
