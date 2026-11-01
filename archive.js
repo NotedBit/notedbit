@@ -8,7 +8,7 @@
     const filters = Array.from(document.querySelectorAll('[data-filter]'));
     const feedback = document.querySelector('[data-result-count]');
     if (!search || !records.length) return;
-    let category = 'software';
+    let category = 'all';
     const archiveMain = document.getElementById('project-groups');
     const views = Array.from(document.querySelectorAll('[data-archive-view]'));
     const bulkButtons = Array.from(document.querySelectorAll('[data-archive-expand]'));
@@ -26,6 +26,7 @@
       for (const group of groups) {
         group.hidden = !group.querySelector('.archive-record:not([hidden])');
       }
+      if (archiveMain) archiveMain.classList.toggle('is-all-view', category === 'all');
       for (const button of filters) {
         button.setAttribute('aria-pressed', String(button.dataset.filter === category));
       }

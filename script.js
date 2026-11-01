@@ -133,7 +133,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   // Without JavaScript the full content stays visible. With JS only secondary
   // sections fold away until requested; section anchors remain shareable.
   const caseSections = Array.from(document.querySelectorAll('main > .case-section'));
-  if (caseSections.length) {
+  if (caseSections.length >= 5) {
     const nav = document.createElement('nav');
     nav.className = 'case-jump-nav section-shell';
     nav.setAttribute('aria-label', 'Sections in this case study');

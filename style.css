@@ -3316,3 +3316,48 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
 .studio-collapse-label {display:none;}
 .studio-project[open] .studio-expand-label {display:none;}
 .studio-project[open] .studio-collapse-label {display:inline;}
+
+
+/* Notedbit polish 2026-11 — functional density and factual media */
+.archive-main.is-all-view .archive-group-head {display:none!important;}
+.archive-main.is-all-view .archive-group {margin:0;}
+.archive-main.is-all-view:not(.is-card-view) .archive-records {margin:0;}
+.archive-main.is-all-view:not(.is-card-view) .archive-record:first-child {border-top:0;}
+.archive-main.is-all-view.is-card-view {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start;}
+.archive-main.is-all-view.is-card-view .archive-group,
+.archive-main.is-all-view.is-card-view .archive-records {display:contents;}
+.archive-main.is-all-view.is-card-view .archive-record {margin:0;}
+.archive-record-panel .case-section-head .section-kicker {display:none;}
+.archive-rebuilt-demo-link {display:inline-flex;margin:10px 0 0;padding:7px 10px;border:1px solid #456780;border-radius:7px;color:#cae7fa;font-size:.76rem;}
+.archive-rebuilt-demo-link:hover {background:#243b50;color:white;}
+.studio-project-cover {overflow:hidden;}
+.studio-project:nth-child(2) .studio-project-cover img,
+.studio-project-cover img[src$="dungeoncrawler-gameplay.png"] {object-fit:contain!important;object-position:50% 50%!important;image-rendering:pixelated;background:#211629;}
+.case-game-media img {width:100%;height:auto;max-height:450px;object-fit:contain;image-rendering:pixelated;background:#211629;}
+.case-fact-line {display:flex;flex-wrap:wrap;gap:5px 16px;margin:14px 0 0;color:#9fbbd0;font-size:.76rem;line-height:1.55;}
+.case-fact-line span + span {border-left:1px solid #3b5366;padding-left:16px;}
+.case-hero {padding-bottom:clamp(22px,3vw,38px);}
+.case-hero .case-title {max-width:980px;}
+.case-section {padding-top:22px;padding-bottom:22px;}
+.case-section-head {margin-bottom:9px;}
+.case-section-head h2 {margin-top:0;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.2;}
+.case-section-body p {max-width:820px;line-height:1.65;}
+.case-media {padding-top:20px;padding-bottom:24px;}
+.case-media-head {margin-bottom:16px;}
+.case-game-media {align-items:center;}
+@media(max-width:760px) {
+ .archive-main.is-all-view.is-card-view {grid-template-columns:1fr;}
+ .case-fact-line {display:block;}
+ .case-fact-line span {display:block;}
+ .case-fact-line span + span {border-left:0;padding-left:0;margin-top:3px;}
+}
+
+.case-demo-link {display:inline-flex;margin-top:12px;font-size:.79rem;padding:9px 13px;}
+.case-genuine-screenshot {width:min(calc(100% - 40px),980px);margin:10px auto 24px;}
+.case-genuine-screenshot img {display:block;width:100%;height:auto;max-height:380px;object-fit:contain;border:1px solid #304962;border-radius:10px;background:#0d1723;}
+.case-genuine-screenshot figcaption {font-size:.72rem;color:#91a6b9;margin-top:8px;}
+/* Card view must override the older two-column mobile list placement rules. */
+.archive-main.is-card-view .archive-record summary {grid-template-columns:54px minmax(0,1fr) 25px;align-items:center;}
+.archive-main.is-card-view .archive-record-year {grid-column:1;grid-row:1;}
+.archive-main.is-card-view .archive-record-heading {grid-column:2;grid-row:1;}
+.archive-main.is-card-view .archive-record-chevron {grid-column:3;grid-row:1;}
