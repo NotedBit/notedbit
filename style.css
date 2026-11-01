@@ -3111,12 +3111,23 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
 .studio-project summary::-webkit-details-marker {display:none;}
 .studio-project summary::marker {content:'';}
 .studio-project summary:focus-visible {outline:2px solid #a1d6ff;outline-offset:-3px;}
-.studio-project-cover {height:145px;overflow:hidden;position:relative;background:#1d2b3c;}
-.studio-project-cover img {height:100%;width:100%;object-fit:cover;display:block;transition:transform .27s ease;}
-.studio-project:nth-child(1) .studio-project-cover img {object-fit:cover;object-position:center 40%;}
-.studio-project:nth-child(2) .studio-project-cover img {image-rendering:pixelated;object-fit:cover;}
-.studio-project:hover .studio-project-cover img {transform:scale(1.025);}
-.studio-project-cover-mark {position:absolute;bottom:9px;right:10px;display:grid;place-items:center;background:rgba(13,25,36,.86);border:1px solid #617995;border-radius:7px;width:27px;height:27px;font-size:1rem;color:#d0e8ff;line-height:1;}
+/* Featured project images: show the complete source material without forced crops. */
+.studio-project-cover {height:186px;overflow:hidden;position:relative;display:grid;place-items:center;background:#162435;isolation:isolate;}
+.studio-project-cover img {height:100%;width:100%;object-fit:contain;object-position:center;display:block;position:relative;z-index:1;transition:transform .27s ease;}
+/* Video: existing workflow illustration and original output frame, both uncropped. */
+.studio-project:nth-child(1) .studio-project-cover {display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 16px;background:radial-gradient(ellipse at 50% 55%,#19405a 0%,#0b1b2b 80%);}
+.studio-project:nth-child(1) .studio-project-cover .studio-cover-workflow {height:100%;width:auto;max-width:57%;aspect-ratio:9/16;object-fit:contain;border-radius:6px;}
+.studio-project:nth-child(1) .studio-project-cover .studio-cover-result {height:87%;width:auto;max-width:40%;aspect-ratio:9/16;object-fit:contain;border-radius:6px;box-shadow:0 2px 16px rgba(0,0,0,.22);}
+/* Game: full original grid and sprites in the shot, no cropped walls or enemies. */
+.studio-project:nth-child(2) .studio-project-cover {background:radial-gradient(ellipse at center,#372444 0%,#21192c 82%);}
+.studio-project:nth-child(2) .studio-project-cover::before {content:'';position:absolute;inset:-16px;z-index:0;background:url('assets/dungeoncrawler-preview.png') center/cover no-repeat;filter:blur(13px);opacity:.2;pointer-events:none;}
+.studio-project:nth-child(2) .studio-project-cover img {position:absolute;inset:0;image-rendering:pixelated;object-fit:contain;width:100%;height:100%;}
+/* Website: genuine Notedbit screenshot with browser header and hero preserved. */
+.studio-project:nth-child(3) .studio-project-cover {background:#0c1725;padding:7px 11px;}
+.studio-project:nth-child(3) .studio-project-cover img {position:absolute;inset:7px 11px;object-fit:contain;object-position:center;width:calc(100% - 22px);height:calc(100% - 14px);border-radius:4px;}
+.studio-project:hover .studio-project-cover img {transform:scale(1.015);}
+
+.studio-project-cover-mark {z-index:2;position:absolute;bottom:9px;right:10px;display:grid;place-items:center;background:rgba(13,25,36,.86);border:1px solid #617995;border-radius:7px;width:27px;height:27px;font-size:1rem;color:#d0e8ff;line-height:1;}
 .studio-project[open] .studio-project-cover-mark {font-size:0;}
 .studio-project[open] .studio-project-cover-mark:after {content:'−';font-size:1.1rem;}
 .studio-project-titleblock {padding:14px 15px 13px;}
@@ -3241,6 +3252,10 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
   .studio-project-grid {grid-template-columns:1fr;gap:10px;}
   .studio-project summary {display:grid;grid-template-columns:140px minmax(0,1fr);min-height:142px;}
   .studio-project-cover {height:100%;min-height:142px;}
+  .studio-project:nth-child(1) .studio-project-cover {padding:7px;gap:0;}
+  .studio-project:nth-child(1) .studio-project-cover .studio-cover-workflow {max-width:100%;height:100%;}
+  .studio-project:nth-child(1) .studio-project-cover .studio-cover-result {display:none;}
+  .studio-project:nth-child(3) .studio-project-cover {padding:6px;}
   .studio-project-titleblock {padding:13px;}
   .studio-project-titleblock > .archive-record-title {min-height:0;font-size:1.06rem;margin:6px 0;}
   .studio-project-titleblock > .archive-record-description {font-size:.73rem;-webkit-line-clamp:2;min-height:0;}
@@ -3256,8 +3271,13 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
   .studio-eyebrow {font-size:.72rem;}
   .studio-section-header {display:block;}
   .studio-small-link {display:inline-block;margin-top:9px;}
-  .studio-project summary {grid-template-columns:102px minmax(0,1fr);min-height:147px;}
-  .studio-project-cover {min-height:147px;}
+  /* On phones, full-width previews remain legible instead of shrinking to 102px. */
+  .studio-project summary {display:block;min-height:0;}
+  .studio-project-cover {height:176px;min-height:0;}
+  .studio-project:nth-child(1) .studio-project-cover {gap:10px;padding:8px 14px;}
+  .studio-project:nth-child(1) .studio-project-cover .studio-cover-workflow {height:100%;max-width:52%;}
+  .studio-project:nth-child(1) .studio-project-cover .studio-cover-result {display:block;height:85%;max-width:39%;}
+  .studio-project:nth-child(3) .studio-project-cover {padding:7px 10px;}
   .studio-project-label {font-size:.57rem;}
   .studio-project-titleblock {padding:10px;}
   .studio-project-titleblock > .archive-record-title {font-size:.93rem;line-height:1.23;}
