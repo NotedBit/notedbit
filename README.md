@@ -1,51 +1,66 @@
-# Notedbit — developer portfolio
+# Notedbit — portfolio & project archive
 
-Personal project archive by **Loran Mustafa**, a Business Information Systems student at **Technische Universität Braunschweig**.
+Static bilingual technical portfolio by **Loran Mustafa**.
 
-**Website:** https://notedbit.com · **LinkedIn:** https://www.linkedin.com/in/loran-mustafa
+- **Website:** https://notedbit.com
+- **LinkedIn:** https://www.linkedin.com/in/loran-mustafa
+- **GitHub profile:** https://github.com/notedbit
 
-## Scope
+## Design and content
 
-Static bilingual site (English / German) with selected technical projects, an archive and case studies. Built with **HTML, CSS, vanilla JavaScript**, versioned using Git and deployed with **GitHub Pages**. No frontend framework, backend or build step.
+The homepage highlights **three projects with directly inspectable evidence** (prototype video, playable browser adaptation, published site/source). The project archive contains **nine principal work areas**, plus smaller archived exercises grouped by topic. Ideas and future hardware concepts remain in `docs/PROJECT_INVENTORY.md`, **not** in the public portfolio.
 
-## Real demonstrations
+Projects are not automatically called complete. Historic coursework dates are preserved, and subsequent software adaptations/tests are identified separately. The full project catalogue records evidence and limits.
 
-- **Automated Product Video Generation:** a hosted output MP4 from an early working prototype; later Linux test results refer to a different run.
-- **C++ Game Development — Dungeon Crawler:** browser-playable **JavaScript adaptation** of an archived **university C++ group project**.
-- **Notedbit:** live website and source code in this repository.
+## Technology
 
-Other projects may be described without a hosted executable or sample. Their current status is clearly indicated.
+- Plain **HTML, CSS, JavaScript**; no framework or backend
+- **GitHub Pages** with custom domain
+- **DE/EN** language preference using `language.js` and browser local storage
+- Lightweight client-side searchable/filterable archive in `archive.js`
+- Media: a real generated product-video **prototype output**, genuine archived graphics and a JavaScript game adaptation
 
-## Repository layout
+## Folder layout
 
 ```text
-index.html                          Landing page
-projects/index.html                 Full project archive
-projects/*.html                     Technical case studies
-assets/                             Genuine project images and prototype output
-language.js                         DE/EN language switch
-style.css, script.js                Site styling and navigation behavior
-games/dungeoncrawler/              JavaScript game adaptation
-docs/PROJECT_INVENTORY.md           Source-based project/status catalogue
-CNAME                               GitHub Pages custom domain (must remain)
+CNAME                                  Custom domain: notedbit.com — do not delete
+index.html                             Main portfolio
+projects/index.html                    Complete public project archive
+projects/*.html                        Topic-specific technical case studies
+archive.js                             Archive search and filters
+language.js                            DE/EN translation logic
+style.css, script.js                   Styles and core navigation
+assets/                                 Genuine visuals and prototype video
+  trending-trove-prototype.mp4         Earlier video output, not a final release
+  trending-trove-poster.jpg            Frame from that output
+  notedbit-site-preview.png            Screenshot of this website
+  dungeoncrawler-preview.png           Original graphics
+  memesmoke-*.jpg                      Original historical screenshots
+  og-preview.png/svg, favicon.svg      Site assets
+games/dungeoncrawler/                  Browser adaptation (game.js, game.css, sprites)
+docs/PROJECT_INVENTORY.md              Full status inventory, including ideas
+docs/PROJECT_SOURCE_AUDIT.md           Provenance, dates, verified/unverified scopes
+docs/PUBLICATION_REVIEW.md             Privacy/copyright/deployment review
 ```
 
 ## Run locally
-
-Serve the directory with a static HTTP server, for example:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/`. No dependencies are required for the website itself.
+Visit `http://localhost:8000`. The local server is useful because the game uses asset fetches; opening individual HTML files via `file://` is not a reliable functional test.
 
-## Attribution & status
+## Attribution and disclosure
 
-The original Dungeon Crawler was **group coursework**. The browser adaptation is a separate later implementation. Unfinished C++ coursework is not presented as functional software. Product-video output is a prototype demonstration, not a commercial release.
+- The original **C++ Dungeon Crawler (2022/23)** was university **group** coursework. The **JavaScript browser adaptation** is later work.
+- The **2024 C++ library-management source** is archived, but its command dispatch was incomplete; original individual code authorship is not fully verified. A separate 2026 reconstructed CLI exists in the **review-only delivery package**, not in the public website repository.
+- The **product video** is an earlier prototype. A later automated Linux run tested a *different* output. Do not conflate them.
+- Python simulation and horror-video application source archives are known from the user's Library, but the raw bytes were unavailable for reinspection in this session. Their case studies do not claim a new successful execution.
+- No invented demos, performance numbers, Windows release validation or third-party repository links.
 
-**No public download / source URL is promised** for projects not yet published. See [project catalogue](docs/PROJECT_INVENTORY.md) for further details.
+## Deploy carefully
 
-## Deployment
+The required root `CNAME` contains exactly `notedbit.com`. Do not delete or replace this file with a blank value. The delivery package includes a local publishing script that clones the repository, overlays only the supplied website files, checks `CNAME`, shows the pending changes and requires explicit confirmation before pushing.
 
-GitHub Pages serves the repository using the root `CNAME` file containing `notedbit.com`. Do not delete or overwrite it while uploading targeted changes.
+Check copyright/privacy and possible legal-notice obligations before publication: `docs/PUBLICATION_REVIEW.md`.
