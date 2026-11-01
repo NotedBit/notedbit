@@ -40,3 +40,8 @@ The public portfolio groups implementations into nine main areas. Historic exerc
 Each detailed public case has to distinguish: **what was built**, **who contributed**, **original year**, **actual evidence**, **current stage**, **remaining work**, and **rights**. Do not move pure ideas to the public archive or claim code belongs to the user without review. See `PROJECT_SOURCE_AUDIT.md` and `PUBLICATION_REVIEW.md`.
 
 **2026-11-01:** Original C++ calculator and Bubble Sort sources compile and have a separately attributed, AI-assisted browser adaptation under `demos/cpp-exercises/`. Dungeon Crawler individual authorship was corrected at the project owner’s instruction. No projects were removed.
+
+
+## Curation decision (2026-11-01)
+
+Text Calculator and three-number Bubble Sort removed from public project cards at the owner's explicit request. Original source files are retained separately. Introductory C++ programs, computer-architecture coursework and the unfinished library-management project **are not removed** pending owner review. The Browser C++ exercises demo is not promoted in the public index.
