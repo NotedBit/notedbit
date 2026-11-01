@@ -2664,3 +2664,144 @@ body::before { content:""; pointer-events:none; z-index:-1; position:absolute; i
 @media(prefers-reduced-motion:reduce) {
  .feature-row,.new-hero,.archive-record {animation:none!important;transition:none!important;}
 }
+
+/* -------------------------------------------------------------
+   Compact portfolio / in-page project archive (November 2026)
+   Keep detailed documents available; make the normal browsing
+   experience a single interactive, accessible archive view.
+-------------------------------------------------------------- */
+
+/* More usable information density without replacing the dark design. */
+.new-hero { padding-top: clamp(52px, 7vw, 90px); padding-bottom: clamp(58px, 7vw, 92px); column-gap: clamp(32px, 5vw, 70px); }
+.new-hero h1 { font-size: clamp(2.85rem, 5vw, 5.1rem); line-height: 1.04; letter-spacing: -.06em; }
+.new-hero-lead { margin-top: 23px; line-height: 1.7; }
+.new-hero .hero-actions { margin-top: 24px; }
+.hero-kicker { margin-bottom: 23px; }
+.new-hero-aside { padding: 18px 22px 12px; }
+.aside-item { padding: 14px 0; }
+.aside-note { padding-top: 12px; }
+.work-section,.profile-section,.skills-section { padding-block: clamp(48px, 6vw, 76px); }
+.editorial-heading { margin-bottom: 24px; }
+.editorial-heading h2,.skills-heading h2 { font-size: clamp(2rem, 3.65vw, 3.2rem); }
+.feature-list { gap: 15px; }
+.feature-row { min-height: 305px; border-radius: 13px; }
+.feature-media { min-height: 270px; }
+.feature-info { padding: clamp(23px, 3.1vw, 36px); }
+.feature-info h3 { font-size: clamp(1.55rem, 2.35vw, 2.2rem); margin-bottom: 11px; }
+.feature-state { margin-top: 12px; }
+.feature-description { line-height: 1.58; margin-bottom: 16px; }
+.feature-tags { margin-bottom: 17px; }
+.feature-actions { gap: 20px; }
+.archive-teaser { padding: 24px 28px; margin-top: 16px; }
+.archive-teaser h3 { font-size: 1.34rem; }
+.profile-copy p { font-size: .96rem; line-height: 1.72; }
+.skills-board > div { padding: 19px 22px; }
+.contact-section { padding-top: 24px; padding-bottom: 70px; }
+.contact-panel { padding: clamp(25px, 4vw, 44px); }
+.contact-panel h2 { font-size: clamp(2.1rem, 3.4vw, 3.3rem); }
+
+/* Tabs are category filters rather than navigation links. */
+.archive-lead { padding-top: clamp(40px, 5vw, 67px); padding-bottom: 18px; }
+.archive-lead .back-link { margin-bottom: 25px; }
+.archive-lead h1 { font-size: clamp(2.55rem, 4.35vw, 4rem); margin: 8px 0 13px; letter-spacing: -.053em; }
+.archive-lead > p:not(.micro-label):not(.archive-filter-feedback):not(.archive-control-hint) { font-size: .92rem; max-width: 800px; line-height: 1.62; margin-bottom: 23px; }
+.archive-controls { margin-top: 20px; gap: 14px; align-items: center; }
+.archive-search { max-width: 390px; min-height: 44px; padding: 0 12px; border-radius: 9px; }
+.archive-filters { display: flex; align-items: center; gap: 3px; padding: 4px; border: 1px solid #2a3a50; background: #101b29; border-radius: 10px; }
+.archive-filters button { min-height: 34px; padding: 6px 11px; font-weight: 560; font-size: .78rem; border-radius: 7px; white-space: nowrap; }
+.archive-filters button[aria-pressed="true"] { background: #304762; color: #f1f7ff; border-color: rgba(185,216,255,.2); }
+.archive-control-hint { margin: 12px 0 0; font-size: .77rem; color: #9aadbf; }
+.archive-filter-feedback { margin: 5px 0 0; font-size: .72rem; min-height: 1.25em; }
+.archive-main { padding-bottom: 25px; }
+.archive-group { margin-top: 10px; scroll-margin-top: 95px; }
+.archive-group-head { grid-template-columns: 32px minmax(0,1fr) 38px; gap: 12px; padding: 0 0 13px; }
+.archive-group-head h2 { font-size: clamp(1.3rem, 2.25vw, 1.9rem); letter-spacing: -.032em; }
+.archive-group-head p { font-size: .8rem; margin-top: 5px; line-height: 1.45; }
+.archive-group-head > span:first-child,.archive-count { padding-top: 3px; }
+.archive-records { margin-top: 5px; }
+.archive-record { display: block; padding: 0; margin: 0; border-bottom: 1px solid #223044; scroll-margin-top: 90px; }
+.archive-record[hidden],.archive-group[hidden] { display: none!important; }
+.archive-record summary { display: grid; grid-template-columns: 86px minmax(0,1fr) 28px; gap: 13px; list-style: none; align-items: center; padding: 16px 10px 16px 3px; cursor: pointer; border-radius: 6px; transition: background-color .16s; }
+.archive-record summary::-webkit-details-marker { display: none; }
+.archive-record summary::marker { content: ''; }
+.archive-record summary:hover { background: rgba(143,186,237,.06); }
+.archive-record summary:focus-visible,.archive-filters button:focus-visible,.archive-game-launch:focus-visible { outline: 2px solid #a4ceff; outline-offset: 3px; }
+.archive-record[open] > summary { background: rgba(43,75,111,.17); }
+.archive-record-year { font-size: .72rem; padding: 0; }
+.archive-record-heading { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.archive-record-top { gap: 6px; }
+.archive-record-status { font-size: .7rem; color: #97b6d8; }
+.archive-record-title { display: block; color: #f0f5fa; font-size: clamp(.97rem, 1.4vw, 1.17rem); font-weight: 640; line-height: 1.28; letter-spacing: -.012em; }
+.archive-record-stack { display: block; color: #849bb5; font-size: .74rem; line-height: 1.32; overflow-wrap: anywhere; }
+.archive-record-chevron { width: 27px; height: 27px; border: 1px solid #34465f; background: #142334; border-radius: 7px; display: grid; place-items: center; color: #accbf0; transition: transform .16s, background-color .16s; }
+.archive-record-chevron svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.archive-record[open] .archive-record-chevron { transform: rotate(180deg); background: #263c57; }
+.archive-record-panel { padding: 0 46px 24px 102px; }
+.archive-record-description { color: #b5c4d4; line-height: 1.65; font-size: .89rem; max-width: 810px; margin: 8px 0 17px; }
+.archive-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.archive-fact { border: 1px solid #283c53; background: #101b29; border-radius: 9px; padding: 15px 17px; }
+.archive-fact h4 { font-size: .84rem; font-weight: 660; margin: 0 0 8px; color: #c4d8f2; }
+.archive-fact p { margin: 0; color: #a2b3c5; font-size: .82rem; line-height: 1.6; }
+.archive-panel-links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 14px; }
+.archive-case-link { font-size: .8rem; color: #b5d7ff; text-decoration: underline; text-decoration-color: #5879a0; text-underline-offset: 4px; }
+.archive-case-link:hover { color: white; }
+.archive-media { margin-top: 19px; border: 1px solid #273c52; border-radius: 10px; padding: 16px; background: #0c1723; }
+.archive-media p { margin: 7px 0 0; font-size: .8rem; color: #a3b5c7; line-height: 1.57; }
+.archive-media strong { color: #d9e5f5; font-size: .88rem; }
+.archive-video { display: flex; align-items: flex-start; gap: 20px; }
+.archive-video video { display: block; width: clamp(160px, 20vw, 210px); max-height: 370px; aspect-ratio: 9/16; object-fit: contain; background: #030a12; border-radius: 7px; flex: 0 0 auto; }
+.archive-media-caption { max-width: 510px; padding-top: 4px; }
+.archive-game-preview { display: flex; align-items: center; gap: 21px; }
+.archive-game-preview > img { width: 215px; max-width: 45%; aspect-ratio: 1.4; object-fit: cover; image-rendering: pixelated; border-radius: 7px; }
+.archive-game-launch { margin-top: 12px; border: 1px solid #6489b8; background: #253c57; color: #e8f2ff; font: inherit; font-size: .82rem; border-radius: 8px; min-height: 40px; padding: 8px 13px; cursor: pointer; }
+.archive-game-launch:hover { background: #345475; }
+.archive-game-frame { margin-top: 14px; }
+.archive-game-frame[hidden] { display: none; }
+.archive-game-frame iframe { display: block; width: 100%; height: 530px; border: 1px solid #344d65; background: #0d131d; border-radius: 8px; }
+.archive-game-note a,.archive-site-preview a { color: #c3defe; text-decoration: underline; }
+.archive-site-preview img { display: block; width: min(100%, 460px); max-height: 255px; object-fit: cover; object-position: top; border-radius: 7px; }
+.archive-milestones { display: grid; grid-template-columns: repeat(2,minmax(0,180px)); gap: 14px; }
+.archive-milestones img { display: block; width: 100%; height: auto; border-radius: 7px; }
+.archive-milestones p { grid-column: 1/-1; }
+.archive-closing { padding: 25px 0 65px; }
+@media (max-width: 980px) {
+ .new-hero { padding-top: 52px; padding-bottom: 75px; }
+ .feature-row { min-height: 305px; }
+ .feature-media { min-height: 260px; }
+ .archive-controls { align-items: stretch; }
+ .archive-search { max-width: none; flex: 1 1 100%; }
+ .archive-filters { max-width: 100%; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: thin; }
+}
+@media (max-width: 760px) {
+ .new-hero h1 { font-size: clamp(2.45rem, 9.3vw, 4.5rem); }
+ .new-hero { padding-top: 52px; padding-bottom: 78px; }
+ .work-section,.profile-section,.skills-section { padding-block: 44px; }
+ .feature-row { min-height: 0; }
+ .feature-media { height: 190px; min-height: 0; }
+ .feature-info { padding: 22px; }
+ .feature-info h3 { font-size: clamp(1.45rem, 5.3vw, 1.9rem); }
+ .archive-lead { padding-top: 36px; }
+ .archive-lead h1 { font-size: clamp(2.25rem, 8.2vw, 3.3rem); }
+ .archive-filters button { flex: 0 0 auto; }
+ .archive-record summary { grid-template-columns: 55px minmax(0,1fr) 26px; gap: 9px; padding-block: 14px; }
+ .archive-record-panel { padding: 0 3px 23px 62px; }
+ .archive-facts { grid-template-columns: 1fr; }
+ .archive-video { flex-direction: column; }
+ .archive-video video { width: min(100%,220px); max-height: none; }
+ .archive-game-preview { align-items: flex-start; flex-direction: column; }
+ .archive-game-preview > img { width: 100%; max-width: 360px; }
+ .archive-game-frame iframe { height: 480px; }
+ .archive-milestones { grid-template-columns: repeat(2,minmax(0,135px)); }
+}
+@media (max-width: 400px) {
+ .archive-record summary { grid-template-columns: 1fr 26px; }
+ .archive-record-year { grid-column: 1; grid-row: 1; font-size: .65rem; }
+ .archive-record-heading { grid-column: 1; grid-row: 2; }
+ .archive-record-chevron { grid-column: 2; grid-row: 1/3; }
+ .archive-record-panel { padding-left: 0; padding-right: 0; }
+ .archive-lead h1 { font-size: 2.25rem; }
+ .archive-fact { padding: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .archive-record summary,.archive-record-chevron { transition: none; }
+}

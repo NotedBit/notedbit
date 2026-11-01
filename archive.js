@@ -1,32 +1,119 @@
-// Lightweight archive filter. All entries remain visible if JavaScript is disabled.
+// In-page project archive: category controls, searchable accessible details and lazy demos.
 (() => {
+  'use strict';
   document.addEventListener('DOMContentLoaded', () => {
-    const query = document.getElementById('project-search');
-    const records = [...document.querySelectorAll('.archive-record')];
-    const groups = [...document.querySelectorAll('.archive-group')];
-    const buttons = [...document.querySelectorAll('[data-filter]')];
+    const search = document.getElementById('project-search');
+    const records = Array.from(document.querySelectorAll('.archive-record'));
+    const groups = Array.from(document.querySelectorAll('.archive-group'));
+    const filters = Array.from(document.querySelectorAll('[data-filter]'));
     const feedback = document.querySelector('[data-result-count]');
-    if (!query || !records.length) return;
-    let category = 'all';
-    const update = () => {
-      const q = query.value.toLocaleLowerCase().trim();
-      let count = 0;
-      records.forEach(record => {
-        const show = (category === 'all' || record.dataset.category === category) && (!q || (record.dataset.search || '').includes(q));
-        record.hidden = !show;
-        if (show) count++;
-      });
-      groups.forEach(group => group.hidden = !group.querySelector('.archive-record:not([hidden])'));
+    if (!search || !records.length) return;
+    let category = 'software';
+
+    function update() {
+      const q = search.value.trim().toLocaleLowerCase();
+      let shown = 0;
+      for (const record of records) {
+        const searchable = (record.dataset.search || '').toLocaleLowerCase();
+        const visible = (category === 'all' || record.dataset.category === category) && (!q || searchable.includes(q));
+        record.hidden = !visible;
+        if (!visible && record.open) record.open = false;
+        if (visible) shown++;
+      }
+      for (const group of groups) {
+        group.hidden = !group.querySelector('.archive-record:not([hidden])');
+      }
+      for (const button of filters) {
+        button.setAttribute('aria-pressed', String(button.dataset.filter === category));
+      }
       const de = document.documentElement.lang === 'de';
-      if (feedback) feedback.textContent = de ? `${count} Einträge angezeigt` : `${count} entries shown`;
-    };
-    buttons.forEach(button => button.addEventListener('click', () => {
-      category = button.dataset.filter;
-      buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      if (feedback) feedback.textContent = de
+        ? (shown === 1 ? '1 Projekt angezeigt' : `${shown} Projekte angezeigt`)
+        : (shown === 1 ? '1 project shown' : `${shown} projects shown`);
+    }
+
+    function selectCategory(value) {
+      if (!filters.some(b => b.dataset.filter === value)) return;
+      category = value;
       update();
-    }));
-    query.addEventListener('input', update);
+    }
+
+    filters.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.filter)));
+    search.addEventListener('input', update);
     document.addEventListener('notedbit:languagechange', update);
+
+    records.forEach(record => {
+      record.addEventListener('toggle', () => {
+        if (!record.open) {
+          const video = record.querySelector('video');
+          if (video) video.pause();
+          // Stop a loaded game when its project closes or its category is hidden.
+          const game = record.querySelector('.archive-game');
+          const frame = game?.querySelector('.archive-game-frame');
+          const iframe = frame?.querySelector('iframe');
+          const button = game?.querySelector('[data-game-toggle]');
+          if (frame) frame.hidden = true;
+          if (iframe) iframe.removeAttribute('src');
+          if (button) {
+            button.setAttribute('aria-expanded', 'false');
+            const label = button.querySelector('[data-de]');
+            if (label) {
+              label.dataset.de = 'Spiel hier laden';
+              label.textContent = document.documentElement.lang === 'de' ? 'Spiel hier laden' : 'Load game here';
+            }
+          }
+          return;
+        }
+        // One expanded project at a time, even where details[name] is unsupported.
+        records.forEach(other => {
+          if (other !== record && other.open) other.open = false;
+        });
+        // A shareable link without navigating away.
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', '#' + encodeURIComponent(record.id));
+        }
+      });
+    });
+
+    // Embed the already-published browser game only when requested.
+    document.querySelectorAll('[data-game-toggle]').forEach(button => {
+      button.addEventListener('click', () => {
+        const container = button.closest('.archive-game');
+        const frame = container?.querySelector('.archive-game-frame');
+        const iframe = frame?.querySelector('iframe[data-game-src]');
+        if (!frame || !iframe) return;
+        const opening = frame.hidden;
+        frame.hidden = !opening;
+        button.setAttribute('aria-expanded', String(opening));
+        const de = document.documentElement.lang === 'de';
+        // Keep buttons bilingual without putting translated text in a live label.
+        const label = button.querySelector('[data-de]');
+        if (label) {
+          label.dataset.de = opening ? 'Spiel verbergen' : 'Spiel hier laden';
+          label.textContent = opening ? (de ? 'Spiel verbergen' : 'Hide game') : (de ? 'Spiel hier laden' : 'Load game here');
+        }
+        if (opening && !iframe.hasAttribute('src')) iframe.src = iframe.dataset.gameSrc;
+        if (!opening && iframe.contentWindow) {
+          // Remove the iframe source so a running game does not keep consuming CPU.
+          iframe.removeAttribute('src');
+        }
+      });
+    });
+
+    // The homepage can link directly to a specific expanded project (#video etc.).
+    function openHash() {
+      const hash = decodeURIComponent(window.location.hash.slice(1));
+      const target = records.find(r => r.id === hash);
+      if (!target) return;
+      category = target.dataset.category;
+      search.value = '';
+      update();
+      target.open = true;
+      window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'instant' }));
+    }
+
     update();
+    openHash();
+    window.addEventListener('hashchange', openHash);
   });
 })();

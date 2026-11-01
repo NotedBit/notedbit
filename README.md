@@ -64,3 +64,10 @@ Visit `http://localhost:8000`. The local server is useful because the game uses 
 The required root `CNAME` contains exactly `notedbit.com`. Do not delete or replace this file with a blank value. The delivery package includes a local publishing script that clones the repository, overlays only the supplied website files, checks `CNAME`, shows the pending changes and requires explicit confirmation before pushing.
 
 Check copyright/privacy and possible legal-notice obligations before publication: `docs/PUBLICATION_REVIEW.md`.
+
+
+## Project archive interface
+
+The archive at `projects/` uses native HTML `<details>` for inline project documentation, a JavaScript category filter and search, and a lazy-loaded embedded game demo. The full case-study pages remain accessible as optional references. Language labels are maintained in the HTML with `data-de` and `language.js`.
+
+The sample video is an earlier prototype output, not a current or final release. No project source or demo is published unless the corresponding material is available and verified.
