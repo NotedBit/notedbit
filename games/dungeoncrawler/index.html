@@ -1,149 +1,129 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Dungeon Crawler — Notedbit</title>
-  <meta name="description" content="A browser adaptation of the original C++ Dungeon Crawler university group project.">
-  <meta name="theme-color" content="#0b0d10">
-
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="game.css">
-  <script src="../../language.js" defer></script>
-  <script src="game.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Play Dungeon Crawler — Notedbit</title>
+<meta content="A browser adaptation of the original C++ Dungeon Crawler university group project." name="description"/>
+<meta content="#0b0d10" name="theme-color"/>
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../../style.css" rel="stylesheet"/>
+<link href="game.css" rel="stylesheet"/>
+<script defer="" src="../../language.js"></script>
+<script defer="" src="game.js"></script>
 </head>
-
 <body class="game-page">
-  <a class="skip-link" href="#game">Skip to game</a>
-
-  <header class="site-header game-header">
-    <div class="nav-shell">
-      <a class="brand wordmark" href="../../index.html" aria-label="Notedbit home">
-        <span aria-hidden="true">Note<span class="wordmark-db">db</span>it</span>
-      </a>
-
-      <nav class="game-nav" aria-label="Game navigation">
-        <a href="../../projects/dungeoncrawler.html">Project details</a>
-        <a href="../../projects/">All projects</a>
-      </nav>
-      <div class="language-switch" role="group" aria-label="Sprache / Language" data-language-switch>
-        <button type="button" data-lang="de" lang="de" aria-label="Deutsch wählen" aria-pressed="false">DE</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-lang="en" lang="en" aria-label="Choose English" aria-pressed="true">EN</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="game-shell" id="game">
-    <section class="game-intro">
-      <div>
-        <p class="section-kicker">Browser adaptation</p>
-        <h1>Dungeon Crawler</h1>
-        <p>
+<a class="skip-link" href="#game">Skip to game</a>
+<header class="site-header game-header">
+<div class="nav-shell">
+<a aria-label="Notedbit home" class="brand wordmark" href="../../index.html"><span>Note</span><span class="wordmark-db">db</span><span>it</span></a>
+<nav aria-label="Game navigation" class="game-nav">
+<a href="../../projects/dungeoncrawler.html">Project details</a>
+<a href="../../projects/">All projects</a>
+</nav>
+<div aria-label="Sprache / Language" class="language-switch" data-language-switch="" role="group">
+<button aria-label="Deutsch wählen" aria-pressed="false" data-lang="de" lang="de" type="button">DE</button>
+<span aria-hidden="true">/</span>
+<button aria-label="Choose English" aria-pressed="true" data-lang="en" lang="en" type="button">EN</button>
+</div>
+</div>
+</header>
+<main class="game-shell" id="game">
+<section class="game-intro">
+<div>
+<p class="section-kicker">Browser adaptation</p>
+<h1>Dungeon Crawler</h1>
+<p>
           A lightweight browser version based on the mechanics and original pixel
           assets of the C++ university group project.
         </p>
-      </div>
-
-      <div class="game-note">
-        <span>Controls</span>
-        <p>Arrow keys to move · T + arrow to teleport as Mage · R to restart</p>
-      </div>
-    </section>
-
-    <section class="game-layout">
-      <div class="game-frame">
-        <div class="game-toolbar">
-          <div class="game-stats" aria-live="polite">
-            <span>HP <strong data-hp>—</strong></span>
-            <span>Gold <strong data-gold>—</strong></span>
-            <span>Level <strong data-level>—</strong></span>
-          </div>
-          <div class="game-toolbar-actions">
-            <button class="game-reset" type="button" data-reset>Restart</button>
-            <button class="game-fullscreen" type="button" data-fullscreen aria-label="Enter fullscreen">
+</div>
+<div class="game-note">
+<span>Controls</span>
+<p>Arrow keys to move · T + arrow to teleport as Mage · R to restart</p>
+</div>
+</section>
+<section class="game-layout">
+<div class="game-frame">
+<div class="game-toolbar">
+<div aria-live="polite" class="game-stats">
+<span>HP <strong data-hp="">—</strong></span>
+<span>Gold <strong data-gold="">—</strong></span>
+<span>Level <strong data-level="">—</strong></span>
+</div>
+<div class="game-toolbar-actions">
+<button class="game-reset" data-reset="" type="button">Restart</button>
+<button aria-label="Enter fullscreen" class="game-fullscreen" data-fullscreen="" type="button">
               Fullscreen
             </button>
-          </div>
-        </div>
-
-        <div class="canvas-wrap">
-          <canvas
-            id="dungeon-canvas"
-            width="600"
-            height="600"
-            aria-label="Dungeon Crawler game area"
-          ></canvas>
-
-          <div class="game-overlay is-visible" data-overlay>
-            <div class="overlay-panel" data-start-panel>
-              <p class="section-kicker">Choose a character</p>
-              <h2>Enter the dungeon</h2>
-              <div class="character-grid">
-                <button class="character-card is-selected" type="button" data-character="fighter">
-                  <img src="assets/kaempfer.png" alt="" width="80" height="80">
-                  <strong>Fighter</strong>
-                  <span>50 HP · 15 attack</span>
-                </button>
-                <button class="character-card" type="button" data-character="mage">
-                  <img src="assets/mage.png" alt="" width="80" height="80">
-                  <strong>Mage</strong>
-                  <span>20 HP · 8 attack · teleport</span>
-                </button>
-              </div>
-              <button class="button button-primary game-start" type="button" data-start>
+</div>
+</div>
+<div class="canvas-wrap">
+<canvas aria-label="Dungeon Crawler game area" height="600" id="dungeon-canvas" width="600"></canvas>
+<div class="game-overlay is-visible" data-overlay="">
+<div class="overlay-panel" data-start-panel="">
+<p class="section-kicker">Choose a character</p>
+<h2>Enter the dungeon</h2>
+<div class="character-grid">
+<button class="character-card is-selected" data-character="fighter" type="button">
+<img alt="" height="80" src="assets/kaempfer.png" width="80"/>
+<strong>Fighter</strong>
+<span>50 HP · 15 attack</span>
+</button>
+<button class="character-card" data-character="mage" type="button">
+<img alt="" height="80" src="assets/mage.png" width="80"/>
+<strong>Mage</strong>
+<span>20 HP · 8 attack · teleport</span>
+</button>
+</div>
+<button class="button button-primary game-start" data-start="" type="button">
                 Start game
               </button>
-            </div>
-
-            <div class="overlay-panel is-hidden" data-end-panel>
-              <p class="section-kicker" data-end-kicker>Game over</p>
-              <h2 data-end-title>Run ended</h2>
-              <p data-end-copy></p>
-              <button class="button button-primary" type="button" data-play-again>
+</div>
+<div class="overlay-panel is-hidden" data-end-panel="">
+<p class="section-kicker" data-end-kicker="">Game over</p>
+<h2 data-end-title="">Run ended</h2>
+<p data-end-copy=""></p>
+<button class="button button-primary" data-play-again="" type="button">
                 Play again
               </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="mobile-controls" aria-label="Touch controls">
-          <button type="button" class="control-button control-up" data-move="up" aria-label="Move up">↑</button>
-          <button type="button" class="control-button control-left" data-move="left" aria-label="Move left">←</button>
-          <button type="button" class="control-button control-down" data-move="down" aria-label="Move down">↓</button>
-          <button type="button" class="control-button control-right" data-move="right" aria-label="Move right">→</button>
-          <button type="button" class="control-button control-teleport" data-teleport aria-label="Toggle mage teleport">T</button>
-        </div>
-      </div>
-
-      <aside class="game-sidebar">
-        <div class="sidebar-card">
-          <p class="section-kicker">Current run</p>
-          <p class="game-message" data-message>Select a character to begin.</p>
-        </div>
-
-        <div class="sidebar-card">
-          <p class="section-kicker">Original mechanics</p>
-          <ul>
-            <li>Randomized 20×20 dungeon levels</li>
-            <li>Skeletons and bats move after your turn</li>
-            <li>Chests contain gold and healing</li>
-            <li>Bats can poison the player</li>
-            <li>Mage teleport costs 100 gold</li>
-            <li>Reach the gate to advance</li>
-          </ul>
-        </div>
-
-        <div class="sidebar-card browser-note">
-          <p class="section-kicker">About this version</p>
-          <p>
+</div>
+</div>
+</div>
+<div aria-label="Touch controls" class="mobile-controls">
+<button aria-label="Move up" class="control-button control-up" data-move="up" type="button">↑</button>
+<button aria-label="Move left" class="control-button control-left" data-move="left" type="button">←</button>
+<button aria-label="Move down" class="control-button control-down" data-move="down" type="button">↓</button>
+<button aria-label="Move right" class="control-button control-right" data-move="right" type="button">→</button>
+<button aria-label="Toggle mage teleport" class="control-button control-teleport" data-teleport="" type="button">T</button>
+</div>
+</div>
+<aside class="game-sidebar">
+<div class="sidebar-card">
+<p class="section-kicker">Current run</p>
+<p class="game-message" data-message="">Select a character to begin.</p>
+</div>
+<div class="sidebar-card">
+<p class="section-kicker">Original mechanics</p>
+<ul>
+<li>Randomized 20×20 dungeon levels</li>
+<li>Skeletons and bats move after your turn</li>
+<li>Chests contain gold and healing</li>
+<li>Bats can poison the player</li>
+<li>Mage teleport costs 100 gold</li>
+<li>Reach the gate to advance</li>
+</ul>
+</div>
+<div class="sidebar-card browser-note">
+<p class="section-kicker">About this version</p>
+<p>
             The original project ran as C++ code with AlgoViz. This version ports
             the core gameplay to JavaScript so it can be played directly on Notedbit.
           </p>
-        </div>
-      </aside>
-    </section>
-  </main>
+</div>
+</aside>
+</section>
+</main>
 </body>
 </html>
