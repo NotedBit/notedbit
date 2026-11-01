@@ -9,6 +9,9 @@
     const feedback = document.querySelector('[data-result-count]');
     if (!search || !records.length) return;
     let category = 'software';
+    const archiveMain = document.getElementById('project-groups');
+    const views = Array.from(document.querySelectorAll('[data-archive-view]'));
+    const bulkButtons = Array.from(document.querySelectorAll('[data-archive-expand]'));
 
     function update() {
       const q = search.value.trim().toLocaleLowerCase();
@@ -38,7 +41,39 @@
       update();
     }
 
-    filters.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.filter)));
+    filters.forEach((button, i) => {
+      button.addEventListener('click', () => selectCategory(button.dataset.filter));
+      // Segmented control supports arrow, Home and End for keyboard users.
+      button.addEventListener('keydown', event => {
+        let next = i;
+        if (event.key === 'ArrowRight') next = (i + 1) % filters.length;
+        else if (event.key === 'ArrowLeft') next = (i - 1 + filters.length) % filters.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = filters.length - 1;
+        else return;
+        event.preventDefault();
+        filters[next].focus();
+        selectCategory(filters[next].dataset.filter);
+      });
+    });
+    views.forEach(button => {
+      button.addEventListener('click', () => {
+        const cardMode = button.dataset.archiveView === 'cards';
+        if (archiveMain) archiveMain.classList.toggle('is-card-view', cardMode);
+        views.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      });
+    });
+    let bulkExpanding = false;
+    bulkButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const opening = button.dataset.archiveExpand === 'all';
+        bulkExpanding = opening;
+        records.forEach(record => {
+          if (!opening || !record.hidden) record.open = opening;
+        });
+        window.setTimeout(() => { bulkExpanding = false; }, 0);
+      });
+    });
     search.addEventListener('input', update);
     document.addEventListener('notedbit:languagechange', update);
 
@@ -65,7 +100,7 @@
           return;
         }
         // One expanded project at a time, even where details[name] is unsupported.
-        records.forEach(other => {
+        if (!bulkExpanding) records.forEach(other => {
           if (other !== record && other.open) other.open = false;
         });
         // A shareable link without navigating away.
