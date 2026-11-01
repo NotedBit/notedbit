@@ -12,8 +12,32 @@
     const archiveMain = document.getElementById('project-groups');
     const views = Array.from(document.querySelectorAll('[data-archive-view]'));
     const bulkButtons = Array.from(document.querySelectorAll('[data-archive-expand]'));
+    // Preserve each item's original category container so category tabs can restore it.
+    const originalParents = new Map(records.map(record => [record, record.parentElement]));
+    const chronologicalRecords = [...records].sort((a, b) =>
+      Number(b.dataset.sortYear || 0) - Number(a.dataset.sortYear || 0));
+    const chronologicalSection = document.createElement('section');
+    chronologicalSection.className = 'archive-all-section';
+    chronologicalSection.setAttribute('aria-label', 'All projects, newest documented work first');
+    const chronologicalList = document.createElement('div');
+    chronologicalList.className = 'archive-records archive-all-records';
+    chronologicalSection.append(chronologicalList);
+    if (archiveMain) archiveMain.insertBefore(chronologicalSection, archiveMain.firstChild);
+    let placement = null;
+    function placeRecords() {
+      const newPlacement = category === 'all' ? 'all' : 'categories';
+      if (placement === newPlacement) return;
+      if (newPlacement === 'all') {
+        chronologicalRecords.forEach(record => chronologicalList.appendChild(record));
+      } else {
+        records.forEach(record => originalParents.get(record).appendChild(record));
+      }
+      chronologicalSection.hidden = newPlacement !== 'all';
+      placement = newPlacement;
+    }
 
     function update() {
+      placeRecords();
       const q = search.value.trim().toLocaleLowerCase();
       let shown = 0;
       for (const record of records) {
@@ -24,7 +48,7 @@
         if (visible) shown++;
       }
       for (const group of groups) {
-        group.hidden = !group.querySelector('.archive-record:not([hidden])');
+        group.hidden = category === 'all' || !group.querySelector('.archive-record:not([hidden])');
       }
       if (archiveMain) archiveMain.classList.toggle('is-all-view', category === 'all');
       for (const button of filters) {

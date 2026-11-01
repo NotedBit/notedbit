@@ -3361,3 +3361,33 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
 .archive-main.is-card-view .archive-record-year {grid-column:1;grid-row:1;}
 .archive-main.is-card-view .archive-record-heading {grid-column:2;grid-row:1;}
 .archive-main.is-card-view .archive-record-chevron {grid-column:3;grid-row:1;}
+
+
+/* Clear project evidence and truthful cross-category chronology — 2026-11-01 */
+.archive-all-section[hidden] { display:none!important; }
+.archive-all-section { margin-top:5px; }
+.archive-all-records { margin:0; }
+.archive-main.is-all-view.is-card-view { display:block; }
+.archive-main.is-all-view.is-card-view .archive-all-records { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; align-items:start; }
+.archive-sort-note { width:min(calc(100% - 40px),var(--max-width)); margin:0 auto; font-size:.73rem; color:#96b4c6; }
+.archive-record-heading:has(> .archive-record-thumb) { display:grid; grid-template-columns:130px minmax(0,1fr); gap:14px; align-items:center; }
+.archive-record-heading-content { display:flex; flex-direction:column; gap:5px; min-width:0; }
+.archive-record-thumb { display:block; width:130px; height:84px; overflow:hidden; border:1px solid #3c5169; background:#132537; border-radius:6px; }
+.archive-record-thumb img { width:100%;height:100%; object-fit:contain; object-position:center; }
+.archive-record-thumb img[src$="dungeoncrawler-gameplay.png"] { image-rendering:pixelated; background:#221828; }
+.archive-evidence { width:max-content; max-width:100%; display:inline-flex; align-items:center; margin-top:2px; padding:2px 7px; border:1px solid #457b78; border-radius:5px; background:#183737; color:#a3e6d8; font-size:.72rem; font-weight:650; line-height:1.45; }
+.archive-record summary:has(.archive-record-thumb) { min-height:105px; }
+.archive-main.is-card-view .archive-record summary:has(.archive-record-thumb) { min-height:115px; }
+.archive-main.is-card-view .archive-record-heading:has(> .archive-record-thumb) { grid-template-columns:110px minmax(0,1fr); gap:12px; }
+.archive-main.is-card-view .archive-record-thumb { width:110px; height:74px; }
+@media(max-width:760px) {
+  .archive-main.is-all-view.is-card-view .archive-all-records { grid-template-columns:1fr; }
+}
+@media(max-width:460px) {
+  .archive-record-heading:has(> .archive-record-thumb),
+  .archive-main.is-card-view .archive-record-heading:has(> .archive-record-thumb) { grid-template-columns:80px minmax(0,1fr); gap:9px; }
+  .archive-record-thumb,.archive-main.is-card-view .archive-record-thumb { width:80px; height:62px; }
+  .archive-record summary:has(.archive-record-thumb),
+  .archive-main.is-card-view .archive-record summary:has(.archive-record-thumb) { min-height:102px; }
+  .archive-evidence { font-size:.65rem; }
+}
