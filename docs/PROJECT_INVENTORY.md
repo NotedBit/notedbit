@@ -7,7 +7,7 @@ The public portfolio groups implementations into nine main areas. Historic exerc
 1. **Automated Product Video Generation** (ProductVideoGenerator / Trending Trove, 2026) — Python, local Qwen, Kokoro TTS, FFmpeg, verified *earlier* video output and distinct Linux test logs. Linux prototype; Windows validation open.
 2. **Automated Horror Story & Video Production** (Deadbolt Stories, 2026) — Python story and short-video workflow. Earlier reports and archived packages; current source/export not directly revalidated here.
 3. **Python Simulation & Video Generation** (Satisfying Simulation Generator, 2026) — pygame-ce, ball/wall collisions, deterministic seeds, event system and run evaluation; end-to-end video workflow status needs reinspection.
-4. **C++ Game Development — Dungeon Crawler** (original WS 2022/23, group coursework) and later JavaScript browser adaptation — sprites and playable adaptation available; not a sole-author C++ claim.
+4. **C++ Game Development — Dungeon Crawler** (original WS 2022/23, independent project) and later JavaScript browser adaptation — sprites and playable adaptation available; independently developed C++ original.
 5. **C++ Library Management** (2024 source archive) — multiple C++ classes, vector/STL and persistence draft; original command handler was empty. Newly written 2026 reconstruction is supplied separately, *not* retroactively credited.
 6. **Web Development & Deployment** (Notedbit, 2026) — HTML/CSS/JavaScript, responsive bilingual portfolio and GitHub Pages.
 7. **Linux Configuration & System Automation** (2026) — Kubuntu migration/maintenance, Shell and systemd automation, diagnostics and environment configuration.
@@ -38,3 +38,5 @@ The public portfolio groups implementations into nine main areas. Historic exerc
 ## Publication protocol
 
 Each detailed public case has to distinguish: **what was built**, **who contributed**, **original year**, **actual evidence**, **current stage**, **remaining work**, and **rights**. Do not move pure ideas to the public archive or claim code belongs to the user without review. See `PROJECT_SOURCE_AUDIT.md` and `PUBLICATION_REVIEW.md`.
+
+**2026-11-01:** Original C++ calculator and Bubble Sort sources compile and have a separately attributed, AI-assisted browser adaptation under `demos/cpp-exercises/`. Dungeon Crawler individual authorship was corrected at the project owner’s instruction. No projects were removed.
