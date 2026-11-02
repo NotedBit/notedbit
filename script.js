@@ -129,57 +129,5 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
     window.addEventListener('hashchange', restoreHash);
   });
 
-  // Optional case study reading: preserve every heading and its original text.
-  // Without JavaScript the full content stays visible. With JS only secondary
-  // sections fold away until requested; section anchors remain shareable.
-  const caseSections = Array.from(document.querySelectorAll('main > .case-section'));
-  if (caseSections.length >= 5) {
-    const nav = document.createElement('nav');
-    nav.className = 'case-jump-nav section-shell';
-    nav.setAttribute('aria-label', 'Sections in this case study');
-    nav.dataset.ariaLabelDe = 'Abschnitte dieser Fallstudie';
-    const list = document.createElement('div');
-    list.className = 'case-jump-links';
-    nav.appendChild(list);
-    caseSections.forEach((section, i) => {
-      const head = section.querySelector('.case-section-head');
-      const body = section.querySelector('.case-section-body');
-      const heading = head?.querySelector('h2');
-      if (!head || !body || !heading) return;
-      if (!section.id) section.id = `case-part-${i+1}`;
-      const entry = document.createElement('a');
-      entry.href = `#${section.id}`;
-      entry.textContent = heading.textContent.trim();
-      if (heading.dataset.de) entry.dataset.de = heading.dataset.de;
-      entry.className = 'case-jump-link';
-      list.appendChild(entry);
-
-      if (!body.id) body.id = `case-body-${i+1}`;
-      const toggle = document.createElement('button');
-      toggle.type = 'button';
-      toggle.className = 'case-collapse-toggle';
-      toggle.setAttribute('aria-controls', body.id);
-      const text = document.createElement('span');
-      const glyph = document.createElement('span');
-      glyph.className = 'case-toggle-chevron';
-      glyph.setAttribute('aria-hidden', 'true');
-      glyph.textContent = '⌄';
-      toggle.append(text, glyph);
-      head.append(toggle);
-      const setOpen = open => {
-        body.hidden = !open;
-        toggle.setAttribute('aria-expanded', String(open));
-        text.textContent = isGerman() ? (open ? 'Weniger' : 'Details') : (open ? 'Less' : 'Details');
-        toggle.setAttribute('aria-label', isGerman() ? (open ? 'Abschnitt einklappen' : 'Abschnitt aufklappen') : (open ? 'Collapse section' : 'Expand section'));
-      };
-      setOpen(i === 0 || section.contains(document.getElementById(decodeURIComponent(window.location.hash.slice(1)))));
-      toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-      document.addEventListener('notedbit:languagechange', () => setOpen(toggle.getAttribute('aria-expanded') === 'true'));
-      entry.addEventListener('click', () => setOpen(true));
-      window.addEventListener('hashchange', () => {
-        if (window.location.hash.slice(1) === section.id || section.contains(document.getElementById(decodeURIComponent(window.location.hash.slice(1))))) setOpen(true);
-      });
-    });
-    if (list.childElementCount) caseSections[0].before(nav);
-  }
+  // Case studies remain fully readable; no auto-generated jump menu or folded text.
 })();

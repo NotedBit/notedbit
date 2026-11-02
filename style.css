@@ -3391,3 +3391,29 @@ body { background:linear-gradient(180deg,#0c121c 0,#0b111a 34rem,#0b111a 100%); 
   .archive-main.is-card-view .archive-record summary:has(.archive-record-thumb) { min-height:102px; }
   .archive-evidence { font-size:.65rem; }
 }
+
+/* 2026-11 portfolio: keep lowercase descenders inside hero line boxes (also 125% zoom). */
+.studio-hero-intro,.studio-hero h1,.studio-hero h1>span{overflow:visible;}
+.studio-hero h1{line-height:1.19;letter-spacing:-.052em;padding-bottom:.12em;overflow-wrap:break-word;}
+.studio-hero h1>span{padding-bottom:.08em;}
+.studio-demo-shortcuts{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px;}
+.studio-demo-shortcuts a{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #38516b;border-radius:8px;font-size:.76rem;color:#c4dafa;background:#132438;}
+.studio-demo-shortcuts a:hover{background:#1c344c;}
+.case-demo-frame{width:100%;height:710px;margin:15px 0 7px;border:1px solid #364b61;border-radius:10px;overflow:hidden;background:#0b111a;}
+.case-demo-frame iframe{display:block;width:100%;height:100%;border:0;}
+.case-verified-video{margin:15px 0 10px;}
+.case-verified-video video{display:block;width:min(100%,320px);aspect-ratio:9/16;max-height:550px;object-fit:contain;border:1px solid #33465d;border-radius:9px;background:#080c14;}
+.case-verified-video figcaption{color:#9badc2;font-size:.78rem;margin-top:9px;max-width:450px;line-height:1.5;}
+@media(max-width:760px){.studio-hero h1{font-size:clamp(2rem,8vw,3.25rem);line-height:1.21;letter-spacing:-.046em;} .case-demo-frame{height:580px;} .studio-demo-shortcuts a{font-size:.72rem;}}
+
+/* Verified-project polish: visible evidence without hiding content. */
+.source-evidence{margin:18px 0 0;max-width:760px}
+.source-evidence figcaption{margin-bottom:8px;color:#9eb4c8;font-size:.75rem}
+.source-evidence pre{margin:0;padding:16px;white-space:pre;overflow:auto;background:#101e2d;border:1px solid #32485d;border-radius:9px;color:#c2d9e9;font-size:.78rem;line-height:1.6}
+.archive-record-thumb img[src$="simulation-browser-demo.webp"]{object-fit:cover;object-position:center 48%}
+.archive-record-thumb img[src$="horror-generated-frame.jpg"]{object-fit:cover;object-position:center 42%}
+.studio-hero h1,.studio-hero h1>span{overflow:visible!important;line-height:1.19;padding-bottom:.11em}
+.studio-hero h1{letter-spacing:-.05em}
+@media(max-width:760px){.studio-hero h1{font-size:clamp(2rem,7.7vw,3.25rem);line-height:1.22}}
+/* Scale safely at 125% zoom: do not force a 320 CSS-pixel body wider than the viewport. */
+body{min-width:0}
